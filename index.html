@@ -15,66 +15,58 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script async defer data-website-id="fe791af4-92c0-498d-afaa-a808ce161f7a" src="https://analytics.mawoka.eu.org/umami.js"></script>
 	<link rel="stylesheet" href="css/main.css">
-	<script src="//cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 	<script src="javascript/main.js"></script>
-	<script src="javascript/app.js"></script>
-	<script src="javascript/particles.js"></script>
 </head>
 
 <body>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item text_on_hover" href="index.html">
+				<strong>Mawoka</strong>
+		  	</a>
+	  
+		  	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+		  	</a>
+		</div>
+		<div id="MawokasNavbar" class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item text_on_hover" href="projects.html">
+					Projects
+				</a>
+				<a class="navbar-item text_on_hover" href="git.html">
+					Git
+				</a>
+                <a class="navbar-item text_on_hover" href="https://blog.mawoka.eu.org">
+                    Blog
+                </a>
+                <a class="navbar-item text_on_hover" href="contact.html">
+                    Contact
+                </a>
+			</div>
+		</div>
+	</nav>
 
-		<nav class="navbar" role="navigation" aria-label="main navigation">
-			<div class="navbar-brand">
-				<a class="navbar-item text_on_hover" href="index.html">
-					<strong>Mawoka</strong>
-				</a>
-		
-				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-				</a>
-			</div>
-			<div id="MawokasNavbar" class="navbar-menu">
-				<div class="navbar-start">
-					<a class="navbar-item text_on_hover" href="projects.html">
-						Projects
-					</a>
-					<a class="navbar-item text_on_hover" href="git.html">
-						Git
-					</a>
-					<a class="navbar-item text_on_hover" href="https://blog.mawoka.eu.org">
-						Blog
-					</a>
-					<a class="navbar-item text_on_hover is-primary" href="contact.html">
-						Contact
-					</a>
-				</div>
-			</div>
-		</nav>
 		<section class="section">
 			<div id="particles-js">
 			<div class="container">
-				<h1 class="title flyin" style="color:beige;font-size: 500%;">
+				<h1 class="title" style="color:beige;font-size: 500%;" id="hello-snippet" onclick="change_greeting()">
 					<br>
 					<br>
 					Hey? <span class="hand">👋</span>
 					<p style="color: beige;font-size: 30%;font-weight: 400;">How are you?</p>
+					
 					<br>
 				</h1>
+				<h1 class="title" id="hello-snippet"></h1>
 				<div class="buttons">
-					<!--<progress class="progress is-large is-warning" max="100">60%</progress>-->
 					<button class="umami--click--great shadow button is-success" title="I'm doing great!" onclick="window.location.href = 'great.html';">Great</button>
 					<button class="umami--click--not-so-good shadow button is-danger" title="I'm not so good..." onclick="window.location.href = 'not-so-good.html';">Not so good</button>
 				</div>
 
 			</div>
-			<!--<div class="notification is-warning is-light">
-					<button class="delete"></button>
-					Primar lorem ipsum dolor sit amet, consectetur
-					adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
-				</div>
-				-->
 
 		</section>
 
@@ -169,9 +161,11 @@
 		<div class="content has-text-centered" style="color: black;">
 			<p>
 				<strong>©opyright</strong> by <a href="https://mawoka.eu.org">Mawoka</a>
+				<a style="visibility: hidden;" rel="me" href="https://mastodon.online/@Mawoka"></a>
 			</p>
 		</div>
 	</footer>
+	
 </body>
 
 </html>
