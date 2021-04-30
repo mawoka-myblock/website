@@ -1,5 +1,8 @@
 /*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+
+/* Change color of Navbar-link: 4070*/
+
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
 .pagination-next,
@@ -4064,7 +4067,7 @@ a.navbar-item,
   .navbar-link:hover,
   .navbar-link.is-active {
     background-color: #fafafa;
-    color: #3273dc; }
+    color: teal; }
 
 .navbar-item {
   flex-grow: 0;
@@ -8187,3 +8190,9 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     top: 1.2rem; }
   .timeline.no-headers .timeline-item.is-last::before {
     height: 1.2rem; }
+
+
+.button:hover {
+  transition: all 0.3s;
+  box-shadow: 0 20px 26px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
