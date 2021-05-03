@@ -13,6 +13,8 @@
 	<script src="javascript/navbar.js"></script>
 	<script async defer data-website-id="fe791af4-92c0-498d-afaa-a808ce161f7a" src="https://analytics.mawoka.eu.org/umami.js"></script>
 	<link rel="stylesheet" href="css/main.css">
+	<script src='https://unpkg.com/konami-listener/dist/konami-listener.js'></script>
+	<konami-listener></konami-listener>
 </head>
 
 <body>
@@ -47,6 +49,7 @@
 	  </nav>
 	<section class="section">
 		<div class="container">
+			<konami-listener><h1>Have fun!</h1></konami-listener>
 			<h1 class="title" style="color:beige;font-size: 500%;">
 				<br>
 				<br>
@@ -54,14 +57,19 @@
 				<p style="color: beige;font-size: 30%;font-weight: 400;">Here is something special!</p>
 				<br>
 			</h1>
-
+			<p>I have a time: Konami</p>
 		</div>
 	</section>
 
 	
 	</div>
 
-
+	<script>
+		const konami = document.querySelector('konami-listener');
+		konami.addEventListener('match', function() {
+			window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+		})
+	</script>
 	</div>
 	</div>
 	<footer class="footer ownfooter">
