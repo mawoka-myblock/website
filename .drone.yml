@@ -15,7 +15,7 @@ steps:
       target:
        - /home/ciuser/html
       source:
-       - *.html
+       - ./*.html
        - javascript/
        - css/
 
