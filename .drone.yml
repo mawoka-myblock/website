@@ -20,6 +20,7 @@ steps:
        - ./*.html
        - javascript/
        - css/
+      overwrite: True
 
 -   name: purge cloudflare cache
     image: jetrails/drone-cloudflare-caching
