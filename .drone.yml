@@ -2,7 +2,24 @@ kind: pipeline
 name: default
 
 steps:
--   name: cloudflare
+
+
+-   name: deploy everything
+    image: appleboy/drone-scp
+    settings:
+      host:
+        from_secret: host_addr
+      user: ciuser
+      key:
+        from_secret: ssh_key
+      target:
+       - /home/ciuser/html
+      source:
+       - *.html
+       - javascript/
+       - css/
+
+-   name: purge cloudflare cache
     image: jetrails/drone-cloudflare-caching
     settings:
         api_token:
