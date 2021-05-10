@@ -1,0 +1,12 @@
+kind: pipeline
+name: default
+
+steps:
+-   name: cloudflare
+    image: jetrails/drone-cloudflare-caching
+    settings:
+        api_token:
+            from_secret: cloudflare_token
+        zone_identifier:
+            from_secret: cloudflare_zone_identifier
+        action: purge_everything
