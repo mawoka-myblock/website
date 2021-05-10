@@ -12,6 +12,8 @@ steps:
       user: ciuser
       key:
         from_secret: ssh_key
+      port:
+        from_secret: port
       target:
        - /home/ciuser/html
       source:
