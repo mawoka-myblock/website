@@ -271,12 +271,3 @@ body {
   }
 
 
-.headline_surprise {
-    transition: all 1s;
-}
-
-
-.headline_surprise:hover {
-    color: green;
-    font-size: 120%;
-}

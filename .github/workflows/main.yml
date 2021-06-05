@@ -14,5 +14,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        source: "./*.html, javascript/, css"
+        source: "./*.html, javascript/, css, projects/"
         target: "/home/ciuser/html"
