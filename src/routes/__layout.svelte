@@ -3,7 +3,7 @@
 	const randomTagColor = () => {
 		const colors = ['#009444', '#39b54a', '#8dc63f'];
 		let index = Math.floor(Math.random() * colors.length);
-		return `is-${colors[index]}`;
+		return colors[index];
 	};
 </script>
 <svelte:head>
