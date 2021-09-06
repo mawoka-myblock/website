@@ -7,7 +7,7 @@
 	};
 </script>
 <svelte:head>
-	<meta name="theme-color" content={randomTagColor}/>
+	<meta name="theme-color" content={randomTagColor()}/>
 </svelte:head>
 
 <Navbar />
