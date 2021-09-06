@@ -1,8 +1,0 @@
-name = "website"
-type = "webpack"
-route = ''
-zone_id = ''
-usage_model = ''
-compatibility_flags = []
-workers_dev = true
-site = {bucket = "./build",entry-point = "./workers-site"}
