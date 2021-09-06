@@ -30,6 +30,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Projects - Mawoka</title>
+</svelte:head>
+
 <main>
 	<section class="section">
 		<div class="container">

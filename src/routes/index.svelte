@@ -2,6 +2,9 @@
 	//import '../assets/font.css';
 	import '@fontsource/marck-script/index.css';
 </script>
+<svelte:head>
+	<title>Home - Mawoka</title>
+</svelte:head>
 
 <main>
 	<section class="section">

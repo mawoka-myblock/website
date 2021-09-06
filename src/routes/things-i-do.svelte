@@ -20,6 +20,9 @@
 		{ tech: 'Java', link: '', level: 1 }
 	];
 </script>
+<svelte:head>
+	<title>Things I do - Mawoka</title>
+</svelte:head>
 
 <main>
 	<section class="section">

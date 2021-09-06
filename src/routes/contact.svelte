@@ -1,5 +1,8 @@
 <script>
 </script>
+<svelte:head>
+	<title>Contact - Mawoka</title>
+</svelte:head>
 
 <main>
 	<section class="section">
