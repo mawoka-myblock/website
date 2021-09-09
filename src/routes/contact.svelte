@@ -1,4 +1,9 @@
 <script>
+	import TelegramSVG from "$lib/assets/telegram.svg"
+	import ThreemaSVG from "$lib/assets/threema.svg"
+	import MatrixSVG from "$lib/assets/matrix.svg"
+	import RedditSVG from "$lib/assets/reddit.svg"
+	import MastodonSVG from "$lib/assets/mastodon.svg"
 </script>
 <svelte:head>
 	<title>Contact - Mawoka</title>
@@ -18,7 +23,7 @@
 			<div class="mt-4 is-size-4 center">
 				<span class="icon-text">
 					<span class="icon">
-						<img src="/reddit.svg" alt="Threema Icon" />
+						<img src="{RedditSVG}" alt="Reddit Icon" />
 					</span>
 					<a href="https://reddit.com/u/Mawoka">Reddit</a>
 				</span>
@@ -26,7 +31,7 @@
 			<div class="mt-4 is-size-4 center">
 				<span class="icon-text">
 					<span class="icon">
-						<img src="/mastodon.svg" alt="Threema Icon" />
+						<img src="{MastodonSVG}" alt="Mastodon Icon" />
 					</span>
 					<a href="https://mastodon.online/invite/Mhw5dbRx">Mastodon</a>
 				</span>
@@ -37,7 +42,7 @@
 			<div class="mt-4 is-size-4 center">
 				<span class="icon-text">
 					<span class="icon">
-						<img src="/threema.svg" alt="Threema Icon" />
+						<img src="{ThreemaSVG}" alt="Threema Icon" />
 					</span>
 					<a href="https://threema.id/JPMH8MDV">Threema</a>
 				</span>
@@ -45,7 +50,7 @@
 			<div class="mt-4 is-size-4 center">
 				<span class="icon-text">
 					<span class="icon">
-						<img src="/matrix.svg" alt="Threema Icon" />
+						<img src="{MatrixSVG}" alt="Matrix Icon" />
 					</span>
 					<a href="https://matrix.to/#/@mawoka:matrix.org">Matrix</a>
 				</span>
@@ -53,7 +58,7 @@
 			<div class="mt-4 is-size-4 center">
 				<span class="icon-text">
 					<span class="icon">
-						<img src="/telegram.svg" alt="Threema Icon" />
+						<img src="{TelegramSVG}" alt="Telegram Icon" />
 					</span>
 					<a href="https://t.me/mawoka">Telegram</a>
 				</span>

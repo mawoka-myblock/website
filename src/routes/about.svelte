@@ -1,7 +1,12 @@
 <script>
 </script>
+
 <svelte:head>
 	<title>About - Mawoka</title>
+	<meta property="og:title" content="About - Mawoka" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+	<meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
 </svelte:head>
 
 <main>

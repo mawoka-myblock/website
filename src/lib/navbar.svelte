@@ -20,7 +20,7 @@
 </script>
 
 <div
-	style="position: absolute; left: 0; top: 0; background: white; width: 100%; overflow-x: hidden;"
+	style="position: absolute; left: 0; top: 0; background: white; min-width: 100%; overflow-x: hidden; max-width: 100%; margin-right: 0; padding-left: 0;"
 >
 	<nav class="navbar" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
