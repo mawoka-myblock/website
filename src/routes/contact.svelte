@@ -1,9 +1,9 @@
 <script>
-	import TelegramSVG from "$lib/assets/telegram.svg"
-	import ThreemaSVG from "$lib/assets/threema.svg"
-	import MatrixSVG from "$lib/assets/matrix.svg"
-	import RedditSVG from "$lib/assets/reddit.svg"
-	import MastodonSVG from "$lib/assets/mastodon.svg"
+	import TelegramSVG from "../assets/telegram.svg"
+	import ThreemaSVG from "../assets/threema.svg"
+	import MatrixSVG from "../assets/matrix.svg"
+	import RedditSVG from "../assets/reddit.svg"
+	import MastodonSVG from "../assets/mastodon.svg"
 </script>
 <svelte:head>
 	<title>Contact - Mawoka</title>
