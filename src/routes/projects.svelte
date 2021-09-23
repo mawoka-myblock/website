@@ -1,4 +1,6 @@
 <script>
+	
+
 	const projects = [
 		{
 			name: 'Sd-Replacement',
@@ -23,11 +25,12 @@
 			description: 'A program to learn vocab'
 		},
 		{
-			name: "uptime-kuma-static",
-			github: "https://github.com/mawoka-myblock/uptime-kuma-static",
-			website: "",
-			tags: ["bulma", "python", "jinja2", "uptime-kuma"],
-			description: "A python-script (with docker-container) that generates a static status-page from data collected by Uptime-Kuma."
+			name: 'uptime-kuma-static',
+			github: 'https://github.com/mawoka-myblock/uptime-kuma-static',
+			website: '',
+			tags: ['bulma', 'python', 'jinja2', 'uptime-kuma'],
+			description:
+				'A python-script (with docker-container) that generates a static status-page from data collected by Uptime-Kuma.'
 		}
 	];
 	const randomTagColor = () => {

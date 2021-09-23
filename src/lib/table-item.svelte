@@ -1,7 +1,6 @@
 <script>
 	export let data;
 
-	console.log(data);
 	let sortdir = 'ascending';
 
 	const sortarr = () => {

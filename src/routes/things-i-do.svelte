@@ -1,6 +1,4 @@
-<script>
-	import TableItem from '../lib/table-item.svelte';
-
+<script context="module">
 	const getLanguageData = async (type) => {
 		const response = await fetch('https://late-rice-4828.mawoka.workers.dev/');
 		const res = await response.json();
@@ -10,6 +8,13 @@
 			return res;
 		}
 	};
+
+</script>
+
+<script>
+	import TableItem from '../lib/table-item.svelte';
+
+	
 
 	const skills = [
 		{ tech: 'FastAPI', link: 'https://fastapi.tiangolo.com', level: 5 },
