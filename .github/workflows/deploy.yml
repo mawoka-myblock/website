@@ -40,7 +40,7 @@ jobs:
         env:
           USER: root
         with:
-          preCommands: cd $GITHUB_WORKSPACE
+          preCommands: cd $GITHUB_WORKSPACE && ls && pwd
           apiToken: ${{ secrets.CF_API_TOKEN }}
           
           
