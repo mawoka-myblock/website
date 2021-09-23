@@ -27,11 +27,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
       - name: Install dependencies
-        uses: |
+        run: |
           cd $GITHUB_WORKSPACE
           npm run install
       - name: Build
-        uses: |
+        run: |
           cd $GITHUB_WORKSPACE
           npm run build
       - uses: actions/checkout@v2
