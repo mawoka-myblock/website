@@ -1,6 +1,6 @@
 <script context="module">
 	const getLanguageData = async (type) => {
-		const response = await fetch('https://late-rice-4828.mawoka.workers.dev/');
+		const response = await fetch('https://late-rice-4828.mawoka.workers.dev');
 		const res = await response.json();
 		if (type == 'table') {
 			return res['data']['languages'];
