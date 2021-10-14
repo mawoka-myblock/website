@@ -1,4 +1,5 @@
 <script>
+	import "../lib/flow-text.css"
 </script>
 
 <svelte:head>
@@ -11,21 +12,21 @@
 
 <main>
 	<section class="section">
-		<div class="container">
-			<h1 class="title mt-6" style="color:beige;font-size: 500%;">About</h1>
-			<p class="is-size-3" style="color: beige;">Here you can learn something about me!</p>
+		<div class="container pt-12 text-center">
+			<h1 class="text-8xl mt-6">About</h1>
+			<p class="text-xl mt-4">Here you can learn something about me!</p>
 		</div>
 	</section>
 	<section>
-		<div class="block">
-			<div class="content has-text-centered space-mobile">
-				<h3 class="is-size-3">Basic facts</h3>
+		<div class="block my-5">
+			<div class="space-mobile my-3">
+				<h3 class="text-5xl font-bold">Basic facts</h3>
 				<p class="flow-text">
 					I'm living in Oberhausen, Northrine-Westphalia in Germany and I still visit a school.
 				</p>
 			</div>
-			<div class="content has-text-centered space-mobile">
-				<h3 class="is-size-3">Programming</h3>
+			<div class="my-3 space-mobile">
+				<h3 class="text-5xl font-bold">Programming</h3>
 				<p class="flow-text">
 					I began programming in middle 2020. I started with Python and got better during the
 					Corona-pandemic because of homeschooling. I started with Python and worked with it for a
@@ -42,8 +43,7 @@
 </main>
 
 <style lang="scss">
-	@use "bulma/bulma.sass";
-	@use "../lib/flow-text.scss";
+
 
 	.space-mobile {
 		margin-left: 3rem;

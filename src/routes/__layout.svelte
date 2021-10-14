@@ -1,4 +1,6 @@
 <script>
+	import '../app.css';
+	// import "bulma/css/bulma.css"
 	import Navbar from '../lib/navbar.svelte';
 	const randomTagColor = () => {
 		const colors = ['#009444', '#39b54a', '#8dc63f'];
@@ -11,14 +13,18 @@
 </svelte:head>
 
 <Navbar />
-<slot />
+<div class="pt-12">
+	<slot />
+</div>
+
 
 <style lang="scss">
+
 	:global(body) {
-		overflow-x: hidden;
+		// overflow-x: hidden;
 		background: linear-gradient(to right, #009444, #39b54a, #8dc63f);
-		height: 100%;
-		width: 100%;
+		// height: 100%;
+		// width: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		/*background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */

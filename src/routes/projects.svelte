@@ -1,6 +1,4 @@
 <script>
-	
-
 	const projects = [
 		{
 			name: 'Sd-Replacement',
@@ -46,43 +44,53 @@
 
 <main>
 	<section class="section">
-		<div class="container">
-			<h1 class="title mt-6" style="color:beige;font-size: 500%;">Projects</h1>
-			<p class="is-size-3" style="color: beige;">Here are all my Projects!</p>
-			<p>Not all projects, but the bigger/more important ones</p>
+		<div class="container pt-12 text-center">
+			<h1 class="text-8xl mt-6">Projects</h1>
+			<p class="text-xl mt-4">Not all projects, but the bigger/more important ones</p>
 		</div>
 	</section>
-	<section class="section">
-		<div class="mx-3">
-			{#each projects as { name, github, website, tags, description }}
-				<div class="card mt-3">
-					<div class="card-header">
-						<p class="card-header-title">{name}</p>
-					</div>
-					<div class="card-content">
-						<div class="content">
+
+	<section class="section p-12">
+		{#each projects as { name, github, website, tags, description }}
+			<div class="flex justify-center mx-3">
+				<div class="w-full rounded overflow-hidden shadow-lg bg-white my-8">
+					<div class="px-6 py-4">
+						<div class="font-bold text-xl mb-2 text-black">{name}</div>
+						<p class="text-gray-700 text-base">
 							{description}
-						</div>
-						<div class="tags are-medium">
-							{#each tags as tag}
-								<span class="tag is-light">{tag}</span>
-							{/each}
-						</div>
+						</p>
 					</div>
-					<div class="card-footer">
+					<div class="px-6 pt-4 pb-2">
+						{#each tags as tag}
+							<span
+								class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+								>#{tag}</span
+							>
+						{/each}
+					</div>
+					<!-- <div class="border-black border-t-2 items-stretch flex">
 						{#if github != ''}
-							<a href={github} class="card-footer-item">GitHub</a>
+							<a href={github} class="items-stretch justify-center">GitHub</a>
 						{/if}
 						{#if website != ''}
-							<a href={website} class="card-footer-item">Website</a>
+							<a href={website} class="flex items-stretch justify-center">Website</a>
+						{/if}
+					</div> -->
+
+					<div class="items-stretch bg-transparent flex border-t">
+						{#if github != ''}
+							<div class="flex w-0 flex-grow justify-center p-3">
+								<a href={github} class="text-black">GitHub</a>
+							</div>
+							{#if website != ''}
+								<div class="flex w-0 flex-grow justify-center p-3">
+									<a href={website} class="text-black">Website</a>
+								</div>
+							{/if}
 						{/if}
 					</div>
 				</div>
-			{/each}
-		</div>
+			</div>
+		{/each}
 	</section>
 </main>
-
-<style lang="scss">
-	@use "bulma/bulma.sass";
-</style>

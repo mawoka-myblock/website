@@ -1,6 +1,7 @@
 import preprocess from 'svelte-preprocess';
 //import adapter from '@sveltejs/adapter-node';
 import adapter from '@sveltejs/adapter-cloudflare-workers';
+import postcss from 'postcss';
 
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -9,7 +10,7 @@ const config = {
 		preprocess({
 			defaults: {
 				style: 'scss'
-			}
+			},
 			//postcss: true
 		})
 	],

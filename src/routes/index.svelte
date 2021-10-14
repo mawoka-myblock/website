@@ -1,36 +1,38 @@
 <script>
 	//import '../assets/font.css';
+	import '../lib/flow-text.css';
 	import '@fontsource/marck-script/index.css';
+	import Link from '../lib/Link.svelte';
 </script>
+
 <svelte:head>
 	<title>Home - Mawoka</title>
 </svelte:head>
 
 <main>
 	<section class="section">
-		<div class="container">
-			<h1 class="title mt-6" style="color:beige;font-size: 500%;">
+		<div class="container pt-12 text-center">
+			<h1 class="" style="color:beige;font-size: 500%;">
 				Hello, I'm <span class="marck-script">Mawoka</span>. <span class="hand">👋</span>
 			</h1>
-			<p class="is-size-3" style="color: beige;">How are you?</p>
 		</div>
 	</section>
-	<section class="columns mr-3 ml-3">
-		<div class="column is-size-1">
-			<div class="container center">
-				<a href="/projects">Projects</a>
-			</div>
-		</div>
-		<div class="column is-size-1">
-			<div class="container center">
-				<a href="/contact">Contact</a>
-			</div>
+	<section>
+		<div class="container lg:px-96 px-8">
+			<p class="flow-text">
+				Nice to meet you here. I build stuff and I got a list of them, <Link href="/projects"
+					>here</Link
+				>. If you're interested in what I'm spending my time on, you can see that <Link
+					href="/things-i-do">here</Link
+				>. I also self-host things like <Link href="https://tasks.mawoka.eu.org" nofollow={true}
+					>Vikunja</Link
+				>, <Link href="https://doc.mawoka.eu.org" nofollow={true}>HedgeDoc</Link>
+			</p>
 		</div>
 	</section>
 </main>
 
 <style lang="scss">
-	@use "bulma/bulma.sass";
 	.center {
 		display: flex;
 		justify-content: center;

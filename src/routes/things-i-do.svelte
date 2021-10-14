@@ -8,13 +8,10 @@
 			return res;
 		}
 	};
-
 </script>
 
 <script>
 	import TableItem from '../lib/table-item.svelte';
-
-	
 
 	const skills = [
 		{ tech: 'FastAPI', link: 'https://fastapi.tiangolo.com', level: 5 },
@@ -25,6 +22,7 @@
 		{ tech: 'Java', link: '', level: 1 }
 	];
 </script>
+
 <svelte:head>
 	<title>Things I do - Mawoka</title>
 </svelte:head>
@@ -41,12 +39,18 @@
 			<h3 class="is-size-3 has-text-centered">Where I spent my time on</h3>
 			<h5 class="is-size-5 has-text-centered">Where I spent the majority of my time</h5>
 			<div class="center mt-4">
-				<table class="table is-striped has-text-centered">
-					<thead>
+				<table class="max-w-5xl mx-auto table-auto border-2 border-gray-200">
+					<thead class="justify-between">
 						<tr>
-							<th>Language</th>
-							<th>Time</th>
-							<th>Percent</th>
+							<th class="px-16 py-2">
+								<span class="text-gray-100 font-semibold">Language</span>
+							</th>
+							<th class="px-16 py-2">
+								<span class="text-gray-100 font-semibold">Time</span>
+							</th>
+							<th class="px-16 py-2">
+								<span class="text-gray-100 font-semibold">Percent</span>
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -55,8 +59,10 @@
 						{:then prom}
 							{#each prom as { name, percent, text }}
 								{#if Math.round(percent) >= 5}
-									<tr>
-										<td>{name}</td>
+									<tr class="border-b-2 border-gray-200">
+										<td class="px-16 py-2 flex flex-row items-center">
+											<span class="text-center ml-2 font-semibold">{name}</span>
+										</td>
 										<td>{text}</td>
 										<td>{Math.round(percent)}%</td>
 									</tr>
@@ -78,10 +84,11 @@
 			</div>
 		</div>
 	</div>
+
+	
 </main>
 
 <style lang="scss">
-	@use "bulma/bulma.sass";
 	$table-row-hover-background-color: #009444;
 	.center {
 		display: flex;

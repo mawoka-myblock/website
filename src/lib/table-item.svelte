@@ -17,12 +17,12 @@
 	sortarr();
 </script>
 
-<table class="table is-striped has-text-centered">
-	<thead>
+<table class="max-w-5xl mx-auto table-auto border-2 border-gray-200">
+	<thead class="justify-between">
 		<tr>
-			<th>Technology</th>
-			<th on:click={sortarr}
-				><p>Level</p>
+			<th class="px-16 py-2"><span class="text-gray-100 font-semibold"> Technology</span> </th>
+			<th on:click={sortarr} class="px-16 py-2"
+				><span class="text-gray-100 font-semibold">Level</span>
 				{#if sortdir == 'descending'}
 					<svg
 						width="24"
@@ -104,45 +104,61 @@
 	</thead>
 	<tbody>
 		{#each data as { tech, link, level }}
-			<tr>
+			<tr class="border-b-2 border-gray-200">
 				{#if link == ''}
 					{#if level == 1}
-						<td>{tech}</td>
-						<td>Child</td>
+						<td class="px-16 py-2 flex flex-row items-center"
+							><span class="text-center ml-2 font-semibold">{tech}</span></td
+						>
+						<td><span class="text-center ml-2 font-semibold">Child</span></td>
 					{:else if level == 2}
-						<td>{tech}</td>
-						<td>Junior</td>
+						<td class="px-16 py-2 flex flex-row items-center"
+							><span class="text-center ml-2 font-semibold">{tech}</span></td
+						>
+						<td><span class="text-center ml-2 font-semibold">Junior</span></td>
 					{:else if level == 3}
-						<td>{tech}</td>
-						<td>Teenager</td>
+						<td class="px-16 py-2 flex flex-row items-center"
+							><span class="text-center ml-2 font-semibold">{tech}</span></td
+						>
+						<td><span class="text-center ml-2 font-semibold">Teenager</span></td>
 					{:else if level == 4}
-						<td>{tech}</td>
-						<td>Adult</td>
+						<td class="px-16 py-2 flex flex-row items-center"
+							><span class="text-center ml-2 font-semibold">{tech}</span></td
+						>
+						<td><span class="text-center ml-2 font-semibold">Adult</span></td>
 					{:else if level == 5}
-						<td>{tech}</td>
-						<td>Senior</td>
+						<td class="px-16 py-2 flex flex-row items-center"
+							><span class="text-center ml-2 font-semibold">{tech}</span></td
+						>
+						<td><span class="text-center ml-2 font-semibold">Senior</span></td>
 					{/if}
 				{:else if level == 1}
-					<td><a href={link}>{tech}</a></td>
-					<td>Child</td>
+					<td class="px-16 py-2 flex flex-row items-center"
+						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+					>
+					<td><span class="text-center ml-2 font-semibold">Child</span></td>
 				{:else if level == 2}
-					<td><a href={link}>{tech}</a></td>
-					<td>Junior</td>
+					<td class="px-16 py-2 flex flex-row items-center"
+						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+					>
+					<td><span class="text-center ml-2 font-semibold">Junior</span></td>
 				{:else if level == 3}
-					<td><a href={link}>{tech}</a></td>
-					<td>Teenager</td>
+					<td class="px-16 py-2 flex flex-row items-center"
+						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+					>
+					<td><span class="text-center ml-2 font-semibold">Teenager</span></td>
 				{:else if level == 4}
-					<td><a href={link}>{tech}</a></td>
-					<td>Adult</td>
+					<td class="px-16 py-2 flex flex-row items-center"
+						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+					>
+					<td><span class="text-center ml-2 font-semibold">Adult</span></td>
 				{:else if level == 5}
-					<td><a href={link}>{tech}</a></td>
-					<td>Senior</td>
+					<td class="px-16 py-2 flex flex-row items-center"
+						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+					>
+					<td><span class="text-center ml-2 font-semibold">Senior</span></td>
 				{/if}
 			</tr>
 		{/each}
 	</tbody>
 </table>
-
-<style lang="scss">
-	@use "bulma/bulma.sass";
-</style>
