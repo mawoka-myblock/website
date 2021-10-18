@@ -29,15 +29,15 @@
 
 <main>
 	<section class="section">
-		<div class="container">
-			<h1 class="title mt-6" style="color:beige;font-size: 500%;">Things I do</h1>
-			<p class="is-size-3" style="color: beige;">Here you can see what I do!</p>
+		<div class="container pt-12 text-center">
+			<h1 class="text-8xl mt-6">Things I do</h1>
+			<p class="text-xl mt-4">Here you can see what I do!</p>
 		</div>
 	</section>
-	<div class="columns mr-3 ml-3">
+	<div class="columns mr-3 ml-3 my-8">
 		<div class="column">
-			<h3 class="is-size-3 has-text-centered">Where I spent my time on</h3>
-			<h5 class="is-size-5 has-text-centered">Where I spent the majority of my time</h5>
+			<h3 class="text-3xl text-center">Where I spent my time on</h3>
+			<h5 class="text-xl text-center">Where I spent the majority of my time</h5>
 			<div class="center mt-4">
 				<table class="max-w-5xl mx-auto table-auto border-2 border-gray-200">
 					<thead class="justify-between">
@@ -76,16 +76,14 @@
 			</div>
 		</div>
 		<div class="column" style="overflow-x: hidden;">
-			<h3 class="is-size-3 has-text-centered">Stuff I'm familiar with</h3>
-			<h5 class="is-size-5 has-text-centered">Child -> Junior -> Teenager -> Adult -> Senior</h5>
+			<h3 class="text-3xl text-center">Stuff I'm familiar with</h3>
+			<h5 class="text-xl text-center">Child -> Junior -> Teenager -> Adult -> Senior</h5>
 			<!--        1          2          3         4          5 -->
 			<div class="center mt-4">
 				<TableItem data={skills} />
 			</div>
 		</div>
 	</div>
-
-	
 </main>
 
 <style lang="scss">
