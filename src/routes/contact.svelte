@@ -22,7 +22,7 @@
 		<div>
 			<h1 class="text-3xl text-center">Contact</h1>
 			<div class="mt-4 center">
-				<a href="https://threema.id/JPMH8MDV">
+				<a href="https://threema.id/JPMH8MDV" on:click={() => {plausible("Contact", {props: {media: "Threema"}})}}>
 					<span class="icon-text">
 						<span class="icon">
 							<img src={ThreemaSVG} alt="Threema Icon" />
@@ -32,7 +32,7 @@
 				</a>
 			</div>
 			<div class="mt-4 center">
-				<a href="https://matrix.to/#/@mawoka:matrix.org">
+				<a href="https://matrix.to/#/@mawoka:matrix.org" on:click={() => {plausible("Contact", {props: {media: "Matrix"}})}}>
 					<span class="icon-text">
 						<span class="icon">
 							<img src={MatrixSVG} alt="Matrix Icon" />
@@ -42,7 +42,7 @@
 				</a>
 			</div>
 			<div class="mt-4 center">
-				<a href="https://t.me/mawokag">
+				<a href="https://t.me/mawokag" on:click={() => {plausible("Contact", {props: {media: "Telegram"}})}}>
 					<span class="icon-text">
 						<span class="icon">
 							<img src={TelegramSVG} alt="Telegram Icon" />
@@ -55,7 +55,7 @@
 		<div>
 			<h1 class="text-3xl text-center">Social</h1>
 			<div class="mt-4 center">
-				<a href="https://reddit.com/u/Mawoka">
+				<a href="https://reddit.com/u/Mawoka" on:click={() => {plausible("Contact", {props: {media: "Reddit"}})}}>
 					<span class="icon-text">
 						<span class="icon">
 							<img src={RedditSVG} alt="Reddit Icon" />
@@ -65,7 +65,7 @@
 				</a>
 			</div>
 			<div class="mt-4 center">
-				<a href="https://mastodon.online/invite/Mhw5dbRx">
+				<a href="https://mastodon.online/invite/Mhw5dbRx" on:click={() => {plausible("Contact", {props: {media: "Mastodon"}})}}>
 					<span class="icon-text">
 						<span class="icon">
 							<img src={MastodonSVG} alt="Mastodon Icon" />
