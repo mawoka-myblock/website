@@ -11,7 +11,7 @@
 	"devDependencies": {
 		"@csstools/postcss-sass": "^4.0.0",
 		"@fontsource/marck-script": "^4.5.0",
-		"@sveltejs/adapter-cloudflare-workers": "^1.0.0-next.22",
+		"@sveltejs/adapter-cloudflare-workers": "next",
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.3.3",
 		"cssnano": "^5.0.8",
