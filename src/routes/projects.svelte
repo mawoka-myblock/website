@@ -29,6 +29,13 @@
 			tags: ['bulma', 'python', 'jinja2', 'uptime-kuma'],
 			description:
 				'A python-script (with docker-container) that generates a static status-page from data collected by Uptime-Kuma.'
+		},
+		{
+			name: "Rss2Apprise",
+			gihtub: "https://github.com/mawoka-myblock/rss2apprise",
+			website: "",
+			tags: ["python", "apprise", "deta"],
+			description: "A script that can send you a notification via apprise if a rss-feed changes."
 		}
 	];
 	const randomTagColor = () => {

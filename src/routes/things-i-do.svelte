@@ -1,13 +1,15 @@
 <script context="module">
-	const getLanguageData = async (type) => {
+	export async function load({ fetch }) {
 		const response = await fetch('https://late-rice-4828.mawoka.workers.dev');
-		const res = await response.json();
-		if (type == 'table') {
-			return res['data']['languages'];
-		} else {
-			return res;
-		}
-	};
+		let res = await response.json();
+
+		res = res['data']['languages'];
+		return {
+			props: {
+				res
+			}
+		};
+	}
 </script>
 
 <script>
@@ -21,6 +23,8 @@
 		{ tech: 'Linux', link: '', level: 3 },
 		{ tech: 'Java', link: '', level: 1 }
 	];
+	export let res = [];
+
 </script>
 
 <svelte:head>
@@ -54,23 +58,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						{#await getLanguageData('table')}
-							<p>...waiting</p>
-						{:then prom}
-							{#each prom as { name, percent, text }}
-								{#if Math.round(percent) >= 5}
-									<tr class="border-b-2 border-gray-200">
-										<td class="px-16 py-2 flex flex-row items-center">
-											<span class="text-center ml-2 font-semibold">{name}</span>
-										</td>
-										<td>{text}</td>
-										<td>{Math.round(percent)}%</td>
-									</tr>
-								{/if}
-							{/each}
-						{:catch error}
-							<p style="color: red">{error.message}</p>
-						{/await}
+						{#each res as { name, percent, text }}
+							{#if Math.round(percent) >= 5}
+								<tr class="border-b-2 border-gray-200">
+									<td class="px-16 py-2 flex flex-row items-center">
+										<span class="text-center ml-2 font-semibold">{name}</span>
+									</td>
+									<td>{text}</td>
+									<td>{Math.round(percent)}%</td>
+								</tr>
+							{/if}
+						{/each}
 					</tbody>
 				</table>
 			</div>
