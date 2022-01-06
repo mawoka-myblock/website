@@ -2,7 +2,7 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('/blog/posts');
+		const res = await fetch('https://strapi.myblock.eu.org/api/articles?sort[0]=createdAt%3Adesc');
 		const data = await res.json();
 
 		return { props: { posts: data } };
@@ -10,7 +10,6 @@
 </script>
 
 <script>
-
 	export let posts;
 </script>
 
