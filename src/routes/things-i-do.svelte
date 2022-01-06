@@ -19,7 +19,7 @@
 		{ tech: 'FastAPI', link: 'https://fastapi.tiangolo.com', level: 5 },
 		{ tech: 'Python', link: 'https://python.org', level: 4 },
 		{ tech: 'MongoDB', link: 'https://mongodb.com', level: 3 },
-		{ tech: 'Svelte', link: 'https://svelte.dev', level: 2 },
+		{ tech: 'Svelte', link: 'https://svelte.dev', level: 3 },
 		{ tech: 'Linux', link: '', level: 3 },
 		{ tech: 'Java', link: '', level: 1 }
 	];
@@ -34,7 +34,7 @@
 <main>
 	<section class="section">
 		<div class="container pt-12 text-center">
-			<h1 class="text-8xl mt-6">Things I do</h1>
+			<h1 class="text-8xl mt-6 marck-script">Things I do</h1>
 			<p class="text-xl mt-4">Here you can see what I do!</p>
 		</div>
 	</section>
@@ -73,7 +73,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="column" style="overflow-x: hidden;">
+		<div class="column mt-8" style="overflow-x: hidden;">
 			<h3 class="text-3xl text-center">Stuff I'm familiar with</h3>
 			<h5 class="text-xl text-center">Child -> Junior -> Teenager -> Adult -> Senior</h5>
 			<!--        1          2          3         4          5 -->

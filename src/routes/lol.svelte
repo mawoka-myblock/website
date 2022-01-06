@@ -5,7 +5,7 @@
 <main>
 	<section class="section">
 		<div class="container pt-12 text-center">
-			<h1 class="text-8xl mt-6">Easter Egg!</h1>
+			<h1 class="text-8xl mt-6 marck-script">Easter Egg!</h1>
 			<p class="text-xl mt-4">You found it! That makes me happy!</p>
 		</div>
 	</section>

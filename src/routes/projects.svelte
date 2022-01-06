@@ -32,7 +32,7 @@
 		},
 		{
 			name: "Rss2Apprise",
-			gihtub: "https://github.com/mawoka-myblock/rss2apprise",
+			github: "https://github.com/mawoka-myblock/rss2apprise",
 			website: "",
 			tags: ["python", "apprise", "deta"],
 			description: "A script that can send you a notification via apprise if a rss-feed changes."
@@ -52,7 +52,7 @@
 <main>
 	<section class="section">
 		<div class="container pt-12 text-center">
-			<h1 class="text-8xl mt-6">Projects</h1>
+			<h1 class="text-8xl mt-6 marck-script">Projects</h1>
 			<p class="text-xl mt-4">Not all projects, but the bigger/more important ones</p>
 		</div>
 	</section>
@@ -87,11 +87,11 @@
 					<div class="items-stretch bg-transparent flex border-t">
 						{#if github != ''}
 							<div class="flex w-0 flex-grow justify-center p-3">
-								<a href={github} class="text-black">GitHub</a>
+								<a href={github} class="text-black link-hover">GitHub</a>
 							</div>
 							{#if website != ''}
 								<div class="flex w-0 flex-grow justify-center p-3">
-									<a href={website} class="text-black">Website</a>
+									<a href={website} class="text-black link-hover">Website</a>
 								</div>
 							{/if}
 						{/if}

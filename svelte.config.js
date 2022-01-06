@@ -1,6 +1,7 @@
 import preprocess from 'svelte-preprocess';
 //import adapter from '@sveltejs/adapter-node';
-import adapter from '@sveltejs/adapter-cloudflare-workers';
+// import adapter from '@sveltejs/adapter-cloudflare-workers';
+import adapter from '@sveltejs/adapter-cloudflare';
 import postcss from 'postcss';
 
 
@@ -30,8 +31,14 @@ const config = {
 			}
 		})
 		*/
+		vite: {
+			optimizeDeps: {
+				include: ["highlight.js/lib/core"],
+			},
+		},
 		adapter: adapter()
-	}
-};
+
+	},
+}
 
 export default config;

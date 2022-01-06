@@ -1,96 +1,3 @@
-<!-- <script>
-	import '@fontsource/marck-script/index.css';
-
-	let NavbarOpen = false;
-	let BurgerOpen = false;
-
-	const changeNavbar = () => {
-		if (BurgerOpen) {
-			BurgerOpen = false;
-		} else {
-			BurgerOpen = true;
-		}
-		if (NavbarOpen) {
-			NavbarOpen = false;
-		} else {
-			NavbarOpen = true;
-		}
-		console.log(BurgerOpen, NavbarOpen);
-	};
-</script>
-
-<div
-	style="position: absolute; left: 0; top: 0; background: white; min-width: 100%; overflow-x: hidden; max-width: 100%; margin-right: 0; padding-left: 0;"
->
-	<nav class="navbar" role="navigation" aria-label="main navigation">
-		<div class="navbar-brand">
-			<a class="navbar-item" href="/">
-				<strong class="marck-script">Mawoka</strong>
-			</a>
-
-			<a
-				role="button"
-				class="navbar-burger"
-				aria-label="menu"
-				aria-expanded="false"
-				on:click={changeNavbar}
-				class:is-active={BurgerOpen}
-				href=""
-			>
-				<span aria-hidden="true" />
-				<span aria-hidden="true" />
-				<span aria-hidden="true" />
-			</a>
-		</div>
-		<div class="navbar-menu" class:is-active={NavbarOpen}>
-			<div class="navbar-start">
-				<a class="navbar-item" href="/projects"> Projects </a>
-				<a class="navbar-item" href="/contact"> Contact </a>
-				<a href="/things-i-do" class="navbar-item"> Stuff I do </a>
-				<a href="/about" class="navbar-item"> About me </a>
-			</div>
-		</div>
-	</nav>
-</div> -->
-
-<!--
-	<div style="position: fixed; left: 0; top: 0; background: white; width: 100%; overflow-x: hidden;" class:transparent={!BurgerOpen}>
-	<nav
-		class="navbar"
-		role="navigation"
-		aria-label="main navigation"
-	>
-		<div class="navbar-brand">
-			<a class="navbar-item" href="/">
-				<strong class="marck-script">Mawoka</strong>
-			</a>
-
-			<a
-				role="button"
-				class="navbar-burger"
-				aria-label="menu"
-				aria-expanded="false"
-				on:click={changeNavbar}
-				class:is-active={BurgerOpen}
-				href=""
-			>
-				<span aria-hidden="true" />
-				<span aria-hidden="true" />
-				<span aria-hidden="true" />
-			</a>
-		</div>
-		<div class="navbar-menu" class:is-active={NavbarOpen} style="z-index: 2;">
-			<div class="navbar-start">
-				<a class="navbar-item" href="/projects"> Projects </a>
-				<a class="navbar-item" href="/contact"> Contact </a>
-				<a href="/things-i-do" class="navbar-item"> Stuff I do </a>
-				<a href="/about" class="navbar-item"> About me </a>
-			</div>
-		</div>
-	</nav>
-</div>
--->
-
 <script>
 	import '@fontsource/marck-script/index.css';
 	let openMenu = true;
@@ -105,12 +12,12 @@
 </script>
 
 <nav
-	class="w-screen px-4 lg:px-10 py-2 flex flex-col lg:flex-row lg:items-center fixed navbar shadow-md z-50 top-0"
+	class="w-screen px-4 lg:px-10 py-2 flex flex-col lg:flex-row lg:items-center fixed backdrop-blur-sm bg-white/60 shadow-md z-50 top-0"
 >
 	<!-- Our logo and button -->
 	<section class="w-full lg:w-max flex justify-between">
 		<!-- Logo -->
-		<a href="/" class="font-black tracking-tight text-xl text-black marck-script">Mawoka</a>
+		<a href="/" class="font-black tracking-tight text-xl text-black marck-script link-hover">Mawoka</a>
 
 		<!-- Our open/close buttons -->
 		<!-- Open menu -->
@@ -155,32 +62,32 @@
 	<!-- Our list of items -->
 	<ul id="menu-items" class="lg:flex w-full flex-col lg:flex-row lg:pl-6" class:hidden={!menuItems}>
 		<li class="py-2">
-			<a
-				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600"
-				href="/projects">Projects</a
+			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/projects"
+				>Projects</a
 			>
 		</li>
 		<li class="py-2">
-			<a
-				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600"
-				href="/contact">Contact</a
+			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/contact"
+				>Contact</a
 			>
 		</li>
 		<li class="py-2">
-			<a
-				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600"
-				href="/things-i-do">Stuff I do</a
+			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/things-i-do"
+				>Stuff I do</a
 			>
 		</li>
 		<li class="py-2">
-			<a
-				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600"
-				href="/about">About me</a
+			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/about"
+				>About me</a
+			>
+		</li>
+		<li class="py-2">
+			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/blog"
+				>Blog</a
 			>
 		</li>
 	</ul>
 </nav>
-
 
 <style lang="scss">
 
@@ -188,6 +95,7 @@
 		font-family: 'Marck Script';
 	}
 	.navbar {
-		background: rgba(255, 255, 255, 0.836);
+		// background: rgba(255, 255, 255, 0.836);
+		background: rgb(15 23 42/.1);
 	}
 </style>

@@ -33,10 +33,6 @@
 </main>
 
 <style lang="scss">
-	.center {
-		display: flex;
-		justify-content: center;
-	}
 	@keyframes background_animation {
 		0% {
 			background-position: 0% 50%;

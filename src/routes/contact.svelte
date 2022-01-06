@@ -13,7 +13,7 @@
 <main>
 	<section class="section">
 		<div class="container pt-12 text-center">
-			<h1 class="text-8xl mt-6">Contact</h1>
+			<h1 class="text-8xl mt-6 marck-script">Contact</h1>
 			<p class="text-xl mt-4">You can get in touch with me in many ways!</p>
 		</div>
 	</section>

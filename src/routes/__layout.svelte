@@ -1,15 +1,33 @@
 <script>
 	import '../app.css';
+	import '@fontsource/marck-script/index.css';
 	// import "bulma/css/bulma.css"
 	import Navbar from '../lib/navbar.svelte';
+	import NProgress from 'nprogress';
+	import { navigating } from '$app/stores';
+	import 'nprogress/nprogress.css';
 	const randomTagColor = () => {
 		const colors = ['#009444', '#39b54a', '#8dc63f'];
 		let index = Math.floor(Math.random() * colors.length);
 		return colors[index];
 	};
+	NProgress.configure({
+		// Full list: https://github.com/rstacruz/nprogress#configuration
+		minimum: 0.16
+	});
+
+	$: {
+		if ($navigating) {
+			NProgress.start();
+		}
+		if (!$navigating) {
+			NProgress.done();
+		}
+	}
 </script>
+
 <svelte:head>
-	<meta name="theme-color" content={randomTagColor()}/>
+	<meta name="theme-color" content={randomTagColor()} />
 </svelte:head>
 
 <Navbar />
@@ -17,8 +35,10 @@
 	<slot />
 </div>
 
-
 <style lang="scss">
+	.marck-script {
+		font-family: 'Marck Script';
+	}
 
 	:global(body) {
 		// overflow-x: hidden;
@@ -31,7 +51,18 @@
 		/*background: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%); */
 		color: beige;
 		background-size: 400% 400%;
-		animation: background_animation 15s ease infinite;
+		animation: background_animation 30s ease infinite;
 	}
-	$table-row-hover-background-color: #009444;
+
+	@keyframes background_animation {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
 </style>
