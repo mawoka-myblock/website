@@ -4,7 +4,6 @@
 	let closeMenu = false;
 	let menuItems = false;
 	const toggleMenu = () => {
-		console.log(openMenu, closeMenu, menuItems);
 		openMenu = !openMenu;
 		closeMenu = !closeMenu;
 		menuItems = !menuItems;

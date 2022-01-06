@@ -13,6 +13,7 @@ specifiers:
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^3.2.1
   highlight.js: ^11.3.1
+  lowlight: ^2.5.0
   luxon: ^2.2.0
   nprogress: ^0.2.0
   postcss: ^8.4.5
@@ -54,6 +55,7 @@ devDependencies:
   eslint-config-prettier: 8.3.0_eslint@7.32.0
   eslint-plugin-svelte3: 3.2.1_eslint@7.32.0+svelte@3.44.3
   highlight.js: 11.3.1
+  lowlight: 2.5.0
   luxon: 2.2.0
   nprogress: 0.2.0
   postcss: 8.4.5
@@ -1492,6 +1494,11 @@ packages:
     engines: {node: '>=12.0.0'}
     dev: true
 
+  /highlight.js/11.4.0:
+    resolution: {integrity: sha512-nawlpCBCSASs7EdvZOYOYVkJpGmAOKMYZgZtUqSRqodZE0GRVcFKwo1RcpeOemqh9hyttTdd5wDBwHkuSyUfnA==}
+    engines: {node: '>=12.0.0'}
+    dev: true
+
   /html-encoding-sniffer/2.0.1:
     resolution: {integrity: sha512-D5JbOMBIR/TVZkubHT+OyT2705QvogUW4IBn6nHd756OwieSF9aDYFj4dv6HHEVGYbHaLETa3WggZYWWMyy3ZQ==}
     engines: {node: '>=10'}
@@ -1790,12 +1797,12 @@ packages:
     resolution: {integrity: sha512-cHlYSUpL2s7Fb3394mYxwTYj8niTaNHUCLr0qdiCXQfSjfuA7CKofpX2uSwEfFDQ0EB7JcnMnm+GjbqqoinYYg==}
     dev: true
 
-  /lowlight/2.4.1:
-    resolution: {integrity: sha512-mQkAG0zGQ9lcYecEft+hl9uV1fD6HpURA83/TYrsxKvb8xX2mfyB+aaV/A/aWmhhEcWVzr9Cc+l/fvUYfEUumw==}
+  /lowlight/2.5.0:
+    resolution: {integrity: sha512-OXGUch9JZu4q5r4Ir6QlUp5pBXMxS7NHaclhRiUlxNRcOSK0gtXZcVrsGP4eM7bv0/KDHg/TXQagx/X35EULsA==}
     dependencies:
       '@types/hast': 2.3.4
       fault: 2.0.1
-      highlight.js: 11.3.1
+      highlight.js: 11.4.0
     dev: true
 
   /lru-cache/6.0.0:
@@ -2855,7 +2862,7 @@ packages:
     dependencies:
       '@types/hast': 2.3.4
       hast-util-to-text: 3.1.1
-      lowlight: 2.4.1
+      lowlight: 2.5.0
       unified: 10.1.1
       unist-util-visit: 4.1.0
     dev: true

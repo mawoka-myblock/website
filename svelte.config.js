@@ -31,11 +31,11 @@ const config = {
 			}
 		})
 		*/
-		// vite: {
-		// 	optimizeDeps: {
-		// 		include: ["highlight.js/lib/core"],
-		// 	},
-		// },
+		vite: {
+			optimizeDeps: {
+				exclude: ["lowlight/lib/common.js", "lowlight/lib/all.js", "highlight.js/lib/core"],
+			},
+		},
 		adapter: adapter()
 
 	},

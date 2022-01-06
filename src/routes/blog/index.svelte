@@ -10,10 +10,8 @@
 </script>
 
 <script>
-	import { goto } from '$app/navigation';
 
 	export let posts;
-	console.log(posts);
 </script>
 
 <section class="section">

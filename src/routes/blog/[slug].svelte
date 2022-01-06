@@ -7,7 +7,6 @@
 
 	export const load = async ({ params, fetch }) => {
 		// The params object will contain all of the parameters in the route.
-		console.log(params)
 
 		// Now, we'll fetch the blog post from Strapi
 		const query = qs.stringify({
@@ -46,7 +45,6 @@
 	export let post;
 
 
-	console.log(post)
 	post = post.data[0]
 
 	let content = processor.processSync(post.attributes.content).toString();
