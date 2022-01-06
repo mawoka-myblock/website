@@ -16,7 +16,9 @@
 	<!-- Our logo and button -->
 	<section class="w-full lg:w-max flex justify-between">
 		<!-- Logo -->
-		<a href="/" class="font-black tracking-tight text-xl text-black marck-script link-hover">Mawoka</a>
+		<a href="/" class="font-black tracking-tight text-xl text-black marck-script link-hover"
+			>Mawoka</a
+		>
 
 		<!-- Our open/close buttons -->
 		<!-- Open menu -->
@@ -59,42 +61,46 @@
 	</section>
 
 	<!-- Our list of items -->
-	<ul id="menu-items" class="lg:flex w-full flex-col lg:flex-row lg:pl-6" class:hidden={!menuItems}>
+	<ul
+		id="menu-items"
+		class="lg:flex w-full flex-col lg:flex-row lg:pl-6"
+		class:hidden={!menuItems}
+	>
 		<li class="py-2">
-			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/projects"
-				>Projects</a
+			<a
+				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover"
+				href="/projects">Projects</a
 			>
 		</li>
 		<li class="py-2">
-			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/contact"
-				>Contact</a
+			<a
+				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover"
+				href="/contact">Contact</a
 			>
 		</li>
 		<li class="py-2">
-			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/things-i-do"
-				>Stuff I do</a
+			<a
+				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover"
+				href="/things-i-do">Stuff I do</a
 			>
 		</li>
 		<li class="py-2">
-			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/about"
-				>About me</a
+			<a
+				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover"
+				href="/about">About me</a
 			>
 		</li>
 		<li class="py-2">
-			<a class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover" href="/blog"
-				>Blog</a
+			<a
+				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover"
+				href="/blog">Blog</a
 			>
 		</li>
 	</ul>
 </nav>
 
 <style lang="scss">
-
 	.marck-script {
 		font-family: 'Marck Script';
-	}
-	.navbar {
-		// background: rgba(255, 255, 255, 0.836);
-		background: rgb(15 23 42/.1);
 	}
 </style>

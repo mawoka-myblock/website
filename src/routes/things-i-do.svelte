@@ -24,7 +24,6 @@
 		{ tech: 'Java', link: '', level: 1 }
 	];
 	export let res = [];
-
 </script>
 
 <svelte:head>
@@ -85,16 +84,8 @@
 </main>
 
 <style lang="scss">
-	$table-row-hover-background-color: #009444;
 	.center {
 		display: flex;
 		justify-content: center;
-	}
-
-	.lang-table {
-		border-radius: 25px;
-		border: 2px;
-		//background: #73ad21;
-		padding: 20px;
 	}
 </style>

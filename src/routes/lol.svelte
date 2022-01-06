@@ -15,7 +15,7 @@
 			<p
 				class="text-center text-2xl hover:cursor-pointer"
 				on:click={() => {
-                    plausible("RickRoll")
+					plausible('RickRoll');
 					location.href = '/redir?token=1';
 				}}
 			>

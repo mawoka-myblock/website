@@ -48,7 +48,10 @@
 					</div>
 					<div class="timeline-content">
 						<p class="heading">08/2020</p>
-						<p>School started and I was mad because I didn't <br />have time to code anymore.</p>
+						<p>
+							School started and I was mad because I didn't <br />have time to code
+							anymore.
+						</p>
 					</div>
 				</div>
 				<header class="timeline-header">

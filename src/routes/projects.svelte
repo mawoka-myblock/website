@@ -31,18 +31,14 @@
 				'A python-script (with docker-container) that generates a static status-page from data collected by Uptime-Kuma.'
 		},
 		{
-			name: "Rss2Apprise",
-			github: "https://github.com/mawoka-myblock/rss2apprise",
-			website: "",
-			tags: ["python", "apprise", "deta"],
-			description: "A script that can send you a notification via apprise if a rss-feed changes."
+			name: 'Rss2Apprise',
+			github: 'https://github.com/mawoka-myblock/rss2apprise',
+			website: '',
+			tags: ['python', 'apprise', 'deta'],
+			description:
+				'A script that can send you a notification via apprise if a rss-feed changes.'
 		}
 	];
-	const randomTagColor = () => {
-		const colors = ['primary', 'link', 'info', 'success', 'danger', 'warning'];
-		let index = Math.floor(Math.random() * colors.length);
-		return `is-${colors[index]}`;
-	};
 </script>
 
 <svelte:head>

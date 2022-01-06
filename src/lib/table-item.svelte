@@ -20,7 +20,9 @@
 <table class="max-w-5xl mx-auto table-auto border-2 border-gray-200">
 	<thead class="justify-between">
 		<tr>
-			<th class="px-16 py-2"><span class="text-gray-100 font-semibold"> Technology</span> </th>
+			<th class="px-16 py-2"
+				><span class="text-gray-100 font-semibold"> Technology</span>
+			</th>
 			<th on:click={sortarr} class="px-16 py-2"
 				><span class="text-gray-100 font-semibold">Level</span>
 				{#if sortdir == 'descending'}
@@ -44,7 +46,12 @@
 							stroke-linecap="round"
 							stroke-linejoin="round"
 						/>
-						<path d="M6 6H2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+						<path
+							d="M6 6H2"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
 						<path
 							d="M18 18H2"
 							stroke="currentColor"
@@ -134,27 +141,37 @@
 					{/if}
 				{:else if level == 1}
 					<td class="px-16 py-2 flex flex-row items-center"
-						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+						><span class="text-center ml-2 font-semibold"
+							><a href={link}>{tech}</a></span
+						></td
 					>
 					<td><span class="text-center ml-2 font-semibold">Child</span></td>
 				{:else if level == 2}
 					<td class="px-16 py-2 flex flex-row items-center"
-						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+						><span class="text-center ml-2 font-semibold"
+							><a href={link}>{tech}</a></span
+						></td
 					>
 					<td><span class="text-center ml-2 font-semibold">Junior</span></td>
 				{:else if level == 3}
 					<td class="px-16 py-2 flex flex-row items-center"
-						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+						><span class="text-center ml-2 font-semibold"
+							><a href={link}>{tech}</a></span
+						></td
 					>
 					<td><span class="text-center ml-2 font-semibold">Teenager</span></td>
 				{:else if level == 4}
 					<td class="px-16 py-2 flex flex-row items-center"
-						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+						><span class="text-center ml-2 font-semibold"
+							><a href={link}>{tech}</a></span
+						></td
 					>
 					<td><span class="text-center ml-2 font-semibold">Adult</span></td>
 				{:else if level == 5}
 					<td class="px-16 py-2 flex flex-row items-center"
-						><span class="text-center ml-2 font-semibold"><a href={link}>{tech}</a></span></td
+						><span class="text-center ml-2 font-semibold"
+							><a href={link}>{tech}</a></span
+						></td
 					>
 					<td><span class="text-center ml-2 font-semibold">Senior</span></td>
 				{/if}

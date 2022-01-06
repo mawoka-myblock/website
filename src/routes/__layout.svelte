@@ -41,7 +41,6 @@
 	}
 
 	:global(body) {
-		// overflow-x: hidden;
 		background: linear-gradient(to right, #009444, #39b54a, #8dc63f);
 		// height: 100%;
 		// width: 100%;

@@ -45,7 +45,7 @@ const config = {
 						},
 						code: {
 							color: theme('colors.gray.100')
-						},
+						}
 					}
 				}
 			})

@@ -20,12 +20,13 @@
 	<section>
 		<div class="container lg:px-96 px-8">
 			<p class="flow-text">
-				Nice to meet you here. I build stuff and I got a list of them, <Link href="/projects"
-					>here</Link
+				Nice to meet you here. I build stuff and I got a list of them, <Link
+					href="/projects">here</Link
 				>. If you're interested in what I'm spending my time on, you can see that <Link
 					href="/things-i-do">here</Link
-				>. I also self-host things like <Link href="https://tasks.mawoka.eu.org" nofollow={true}
-					>Vikunja</Link
+				>. I also self-host things like <Link
+					href="https://tasks.mawoka.eu.org"
+					nofollow={true}>Vikunja</Link
 				>, <Link href="https://doc.mawoka.eu.org" nofollow={true}>HedgeDoc</Link>
 			</p>
 		</div>

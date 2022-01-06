@@ -2,8 +2,6 @@ import preprocess from 'svelte-preprocess';
 //import adapter from '@sveltejs/adapter-node';
 // import adapter from '@sveltejs/adapter-cloudflare-workers';
 import adapter from '@sveltejs/adapter-cloudflare';
-import postcss from 'postcss';
-
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,7 +9,7 @@ const config = {
 		preprocess({
 			defaults: {
 				style: 'scss'
-			},
+			}
 			//postcss: true
 		})
 	],
@@ -33,12 +31,11 @@ const config = {
 		*/
 		vite: {
 			optimizeDeps: {
-				exclude: ["lowlight/lib/common.js", "lowlight/lib/all.js", "highlight.js/lib/core"],
-			},
+				exclude: ['lowlight/lib/common.js', 'lowlight/lib/all.js', 'highlight.js/lib/core']
+			}
 		},
 		adapter: adapter()
-
-	},
-}
+	}
+};
 
 export default config;

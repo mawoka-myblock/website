@@ -15,6 +15,5 @@ export async function get() {
 			'Cache-Control': 'max-age=1500'
 		},
 		body: res
-		
 	};
 }
