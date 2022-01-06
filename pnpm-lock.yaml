@@ -14,8 +14,6 @@ specifiers:
   eslint-plugin-svelte3: ^3.2.1
   highlight.js: ^11.3.1
   luxon: ^2.2.0
-  marked: ^4.0.7
-  mustache: ^4.2.0
   nprogress: ^0.2.0
   postcss: ^8.4.5
   postcss-load-config: ^3.1.0
@@ -23,7 +21,6 @@ specifiers:
   postcss-scss: ^4.0.2
   prettier: ~2.2.1
   prettier-plugin-svelte: ^2.5.1
-  prismjs: ^1.25.0
   qs: ^6.10.2
   rehype-highlight: ^5.0.2
   rehype-stringify: ^9.0.2
@@ -36,7 +33,6 @@ specifiers:
   remark-rehype: ^10.1.0
   sanitize-html: ^2.6.1
   sass: ^1.45.0
-  sitemap: ^7.1.0
   svelte: ^3.44.3
   svelte-highlight: ^5.1.4
   svelte-preprocess: ^4.10.0
@@ -44,9 +40,6 @@ specifiers:
   tailwindcss: ^3
   typescript: ^4.5.4
   unified: ^10.1.1
-
-dependencies:
-  prismjs: 1.25.0
 
 devDependencies:
   '@csstools/postcss-sass': 4.0.0
@@ -62,8 +55,6 @@ devDependencies:
   eslint-plugin-svelte3: 3.2.1_eslint@7.32.0+svelte@3.44.3
   highlight.js: 11.3.1
   luxon: 2.2.0
-  marked: 4.0.7
-  mustache: 4.2.0
   nprogress: 0.2.0
   postcss: 8.4.5
   postcss-load-config: 3.1.0
@@ -83,7 +74,6 @@ devDependencies:
   remark-rehype: 10.1.0
   sanitize-html: 2.6.1
   sass: 1.45.0
-  sitemap: 7.1.0
   svelte: 3.44.3
   svelte-highlight: 5.1.4
   svelte-preprocess: 4.10.0_14d64cad431e31f100de7363af24a44f
@@ -316,10 +306,6 @@ packages:
     resolution: {integrity: sha512-eUXZzHLHoZqj1frtUetNkUetYoJ6X55UmrVnFD4DMhVeAmwLjniZhtBmsRiemQh4uq4G3vUra/Ws/hs9vEvL3Q==}
     dev: true
 
-  /@types/node/17.0.6:
-    resolution: {integrity: sha512-+XBAjfZmmivILUzO0HwBJoYkAyyySSLg5KCGBDFLomJo0sV6szvVLAf4ANZZ0pfWzgEds5KmGLG9D5hfEqOhaA==}
-    dev: true
-
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
@@ -332,12 +318,6 @@ packages:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
       '@types/node': 16.11.13
-    dev: true
-
-  /@types/sax/1.2.4:
-    resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
-    dependencies:
-      '@types/node': 17.0.6
     dev: true
 
   /@types/unist/2.0.6:
@@ -1840,12 +1820,6 @@ packages:
     resolution: {integrity: sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==}
     dev: true
 
-  /marked/4.0.7:
-    resolution: {integrity: sha512-mQrRvV2vRk7DHZsWsYJfAjmBo+lSYPhTJPThaaGpkEfmC+4oefeug2txZniQTieDS0CFpokfVhd7JuS5GtnHhA==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    dev: true
-
   /mdast-util-definitions/5.1.0:
     resolution: {integrity: sha512-5hcR7FL2EuZ4q6lLMUK5w4lHT2H3vqL9quPvYZ/Ku5iifrirfMHiGdhxdXMUbUkDmz5I+TYMd7nbaxUhbQkfpQ==}
     dependencies:
@@ -2285,11 +2259,6 @@ packages:
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
-    dev: true
-
-  /mustache/4.2.0:
-    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
-    hasBin: true
     dev: true
 
   /nanoid/3.1.30:
@@ -2833,6 +2802,7 @@ packages:
 
   /prismjs/1.25.0:
     resolution: {integrity: sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg==}
+    dev: true
 
   /progress/2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
@@ -3082,10 +3052,6 @@ packages:
       source-map-js: 1.0.1
     dev: true
 
-  /sax/1.2.4:
-    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
-    dev: true
-
   /saxes/5.0.1:
     resolution: {integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==}
     engines: {node: '>=10'}
@@ -3119,17 +3085,6 @@ packages:
       call-bind: 1.0.2
       get-intrinsic: 1.1.1
       object-inspect: 1.12.0
-    dev: true
-
-  /sitemap/7.1.0:
-    resolution: {integrity: sha512-OctwI2RYFj3Lnoutix0Qhow3AvDoUQ7rsSyzrY8wFKHqXYvmCJXFOBZyVU4/DDtsQ2KnEWY4j4j80hBHBOVEWQ==}
-    engines: {node: '>=12.0.0', npm: '>=5.6.0'}
-    hasBin: true
-    dependencies:
-      '@types/node': 17.0.6
-      '@types/sax': 1.2.4
-      arg: 5.0.1
-      sax: 1.2.4
     dev: true
 
   /slice-ansi/4.0.0:
