@@ -40,7 +40,10 @@
 	import rehypeStringify from 'rehype-stringify';	
 	import rehypeHighlight from 'rehype-highlight'
 	import { DateTime } from "luxon";
-	const processor = unified().use(remarkParse).use(remarkGfm).use(remarkRehype).use(rehypeStringify).use(remarkGemoji).use(rehypeHighlight);
+	import python from 'highlight.js/lib/languages/python'
+	import javascript from 'highlight.js/lib/languages/javascript'
+	import * as lang from "highlight.js/lib/languages/*"
+	const processor = unified().use(remarkParse).use(remarkGfm).use(remarkRehype).use(rehypeStringify).use(remarkGemoji).use(rehypeHighlight, {languages: {javascript, python}});
 
 	export let post;
 
