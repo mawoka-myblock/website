@@ -38,13 +38,20 @@ const config = {
 							color: theme('colors.yellow.50')
 						},
 						'code::before': {
-							content: '""'
+							content: '""',
+							'padding-left': '0.25rem'
 						},
 						'code::after': {
-							content: '""'
+							content: '""',
+							'padding-right': '0.25rem'
 						},
 						code: {
-							color: theme('colors.gray.100')
+							'padding-top': '0.25rem',
+							'padding-bottom': '0.25rem',
+							fontWeight: '400',
+							color: theme('colors.gray.100'),
+							'border-radius': '0.25rem',
+							backgroundColor: theme('colors.slate.800')
 						}
 					}
 				}
