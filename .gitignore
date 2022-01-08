@@ -8,3 +8,4 @@ node_modules
 workers-site/
 dist/
 strapi/
+.pnpm-debug.log
