@@ -2,8 +2,6 @@
 	import '@fontsource/marck-script/index.css';
 	import qs from 'qs';
 	import tippy from 'sveltejs-tippy';
-	// import atomOneLight from "svelte-highlight/src/styles/atom-one-light";
-	import atelierForest from 'svelte-highlight/src/styles/atelier-forest';
 
 	export const load = async ({ params, fetch }) => {
 		// The params object will contain all of the parameters in the route.
