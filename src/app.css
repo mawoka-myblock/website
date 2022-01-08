@@ -16,3 +16,9 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+@layer components {
+	.hljs {
+		@apply bg-slate-800
+	}
+  }

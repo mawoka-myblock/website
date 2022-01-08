@@ -52,6 +52,7 @@
 	import shell from 'highlight.js/lib/languages/shell';
 	import typescript from 'highlight.js/lib/languages/typescript';
 	import xml from 'highlight.js/lib/languages/xml';
+	import "$lib/hljs.css"
 	import yaml from 'highlight.js/lib/languages/yaml';
 	const processor = unified()
 		.use(remarkParse)
@@ -79,36 +80,30 @@
 
 	export let post;
 	export let slug;
+	let content;
 
 	post = post.data[0];
+	content = processor.processSync(post.attributes.content).toString();
 
-	let content = processor.processSync(post.attributes.content).toString();
 	post = post.attributes;
 	const dt = DateTime.fromISO(post.updatedAt);
 </script>
 
 <svelte:head>
-	{@html atelierForest}
 	<title>Mawoka's Blog - {post.title}</title>
 	<meta name="description" content={post.description} />
 
 	<meta property="og:url" content="https://mawoka.eu/blog/{slug}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Mawoka's Blog - {post.title}" />
-	<meta property="og:description" content="{post.description}" />
+	<meta property="og:description" content={post.description} />
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:domain" content="mawoka.eu" />
 	<meta name="twitter:url" content="https://mawoka.eu/blog/{slug}" />
-	<meta
-		name="twitter:title"
-		content="Mawoka's Blog - {post.title}"
-	/>
-	<meta
-		name="twitter:description"
-		content="{post.description}"
-	/>
-	<meta name="twitter:creator" content="@mawoka_">
+	<meta name="twitter:title" content="Mawoka's Blog - {post.title}" />
+	<meta name="twitter:description" content={post.description} />
+	<meta name="twitter:creator" content="@mawoka_" />
 	<!-- <meta name="twitter:image" content="https://www.byeindonesia.com/og-bye-indonesia.png" /> -->
 </svelte:head>
 
