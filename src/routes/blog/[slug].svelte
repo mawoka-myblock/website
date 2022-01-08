@@ -26,7 +26,7 @@
 			return { status: 404, error };
 		} else {
 			const data = await res.json();
-			return { props: { post: data } };
+			return { props: { post: data, slug: params.slug } };
 		}
 	};
 </script>
@@ -78,6 +78,7 @@
 		});
 
 	export let post;
+	export let slug;
 
 	post = post.data[0];
 
@@ -88,6 +89,27 @@
 
 <svelte:head>
 	{@html atelierForest}
+	<title>Mawoka's Blog - {post.title}</title>
+	<meta name="description" content={post.description} />
+
+	<meta property="og:url" content="https://mawoka.eu/blog/{slug}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Mawoka's Blog - {post.title}" />
+	<meta property="og:description" content="{post.description}" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:domain" content="mawoka.eu" />
+	<meta name="twitter:url" content="https://mawoka.eu/blog/{slug}" />
+	<meta
+		name="twitter:title"
+		content="Mawoka's Blog - {post.title}"
+	/>
+	<meta
+		name="twitter:description"
+		content="{post.description}"
+	/>
+	<meta name="twitter:creator" content="@mawoka_">
+	<!-- <meta name="twitter:image" content="https://www.byeindonesia.com/og-bye-indonesia.png" /> -->
 </svelte:head>
 
 <h1 class="text-center text-8xl marck-script">{post.title}</h1>
