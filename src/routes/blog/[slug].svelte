@@ -1,7 +1,5 @@
 <script context="module">
-	import '@fontsource/marck-script/index.css';
 	import qs from 'qs';
-	import tippy from 'sveltejs-tippy';
 
 	/* Markdown-rendering */
 	// import python from 'highlight.js/lib/languages/python';
@@ -93,6 +91,10 @@
 	import { DateTime } from 'luxon';
 	import {onMount} from "svelte"
 	import hljs from "highlight.js/lib/common"
+	import tippy from 'sveltejs-tippy';
+	import '@fontsource/marck-script/index.css';
+
+
 
 	onMount(() => {
 		hljs.highlightAll()

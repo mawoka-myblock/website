@@ -7,10 +7,10 @@ import adapter from '@sveltejs/adapter-cloudflare';
 const config = {
 	preprocess: [
 		preprocess({
-			defaults: {
-				style: 'scss'
-			}
-			//postcss: true
+			// defaults: {
+			// 	style: 'scss'
+			// }
+			postcss: true
 		})
 	],
 
