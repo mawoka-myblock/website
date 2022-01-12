@@ -68,7 +68,7 @@
 			return { status: 404, error };
 		} else {
 			const data = await res.json();
-			return { props: { post: data, slug: params.slug, content: (await processor.process(post.data[0].attributes.content)).toString() } };
+			return { props: { post: data, slug: params.slug, content: (await processor.process(data.data[0].attributes.content)).toString() } };
 		}
 	};
 </script>
