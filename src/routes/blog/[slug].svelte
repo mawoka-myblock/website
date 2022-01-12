@@ -3,7 +3,51 @@
 	import qs from 'qs';
 	import tippy from 'sveltejs-tippy';
 
+	/* Markdown-rendering */
+	import python from 'highlight.js/lib/languages/python';
+	import javascript from 'highlight.js/lib/languages/javascript';
+	import bash from 'highlight.js/lib/languages/bash';
+	import diff from 'highlight.js/lib/languages/diff';
+	import go from 'highlight.js/lib/languages/go';
+	import ini from 'highlight.js/lib/languages/ini';
+	import json from 'highlight.js/lib/languages/json';
+	import markdown from 'highlight.js/lib/languages/markdown';
+	import rust from 'highlight.js/lib/languages/rust';
+	import shell from 'highlight.js/lib/languages/shell';
+	import typescript from 'highlight.js/lib/languages/typescript';
+	import xml from 'highlight.js/lib/languages/xml';
+	import { unified } from 'unified';
+	import remarkParse from 'remark-parse';
+	import remarkGfm from 'remark-gfm';
+	import remarkGemoji from 'remark-gemoji';
+	import remarkRehype from 'remark-rehype';
+	import rehypeStringify from 'rehype-stringify';
+	import rehypeHighlight from 'rehype-highlight';
+
 	export const load = async ({ params, fetch }) => {
+		const processor = unified()
+			.use(remarkParse)
+			.use(remarkGfm)
+			.use(remarkRehype)
+			.use(rehypeStringify)
+			.use(remarkGemoji)
+			.use(rehypeHighlight, {
+				languages: {
+					javascript,
+					python,
+					bash,
+					diff,
+					go,
+					ini,
+					json,
+					markdown,
+					rust,
+					shell,
+					typescript,
+					xml,
+					yaml
+				}
+			});
 		// The params object will contain all of the parameters in the route.
 
 		// Now, we'll fetch the blog post from Strapi
@@ -24,69 +68,27 @@
 			return { status: 404, error };
 		} else {
 			const data = await res.json();
-			return { props: { post: data, slug: params.slug } };
+			return { props: { post: data, slug: params.slug, content: (await processor.process(post.data[0].attributes.content)).toString() } };
 		}
 	};
 </script>
 
 <script>
-	// import { unified } from 'unified';
-	// import remarkParse from 'remark-parse';
-	// import remarkGfm from 'remark-gfm';
-	// import remarkGemoji from 'remark-gemoji';
-	// import remarkRehype from 'remark-rehype';
-	// import rehypeStringify from 'rehype-stringify';
-	import rehypeHighlight from 'rehype-highlight';
 	import { DateTime } from 'luxon';
-	// import python from 'highlight.js/lib/languages/python';
-	// import javascript from 'highlight.js/lib/languages/javascript';
-	// import bash from 'highlight.js/lib/languages/bash';
-	// import diff from 'highlight.js/lib/languages/diff';
-	// import go from 'highlight.js/lib/languages/go';
-	// import ini from 'highlight.js/lib/languages/ini';
-	// import json from 'highlight.js/lib/languages/json';
-	// import markdown from 'highlight.js/lib/languages/markdown';
-	// import rust from 'highlight.js/lib/languages/rust';
-	// import shell from 'highlight.js/lib/languages/shell';
-	// import typescript from 'highlight.js/lib/languages/typescript';
-	// import xml from 'highlight.js/lib/languages/xml';
-	// import "$lib/hljs.css"
-	// import yaml from 'highlight.js/lib/languages/yaml';
+
+	import '$lib/hljs.css';
+	import yaml from 'highlight.js/lib/languages/yaml';
 	import { marked } from 'marked';
-	// const processor = unified()
-	// 	.use(remarkParse)
-	// 	.use(remarkGfm)
-	// 	.use(remarkRehype)
-	// 	.use(rehypeStringify)
-	// 	.use(remarkGemoji)
-		// .use(rehypeHighlight, {
-		// 	languages: {
-		// 		javascript,
-		// 		python,
-		// 		bash,
-		// 		diff,
-		// 		go,
-		// 		ini,
-		// 		json,
-		// 		markdown,
-		// 		rust,
-		// 		shell,
-		// 		typescript,
-		// 		xml,
-		// 		yaml
-		// 	}
-		// });
-
-
-
 
 	export let post;
 	export let slug;
-	let content;
+	export let content
+	// let content;
 
 	post = post.data[0];
 	// content = processor.processSync(post.attributes.content).toString();
-	content = marked.parse(post.attributes.content)
+	// content = marked.parse(post.attributes.content);
+
 
 	post = post.attributes;
 	const dt = DateTime.fromISO(post.updatedAt);
