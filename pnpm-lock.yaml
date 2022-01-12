@@ -3,8 +3,9 @@ lockfileVersion: 5.3
 specifiers:
   '@csstools/postcss-sass': ^4.0.0
   '@fontsource/marck-script': ^4.5.0
-  '@sveltejs/adapter-cloudflare': ^1.0.0-next.6
+  '@sveltejs/adapter-cloudflare': ^1.0.0-next.7
   '@sveltejs/adapter-cloudflare-workers': next
+  '@sveltejs/adapter-node': ^1.0.0-next.61
   '@sveltejs/kit': next
   '@tailwindcss/typography': 0.5.0
   autoprefixer: ^10.4.2
@@ -41,8 +42,9 @@ dependencies:
 devDependencies:
   '@csstools/postcss-sass': 4.0.0
   '@fontsource/marck-script': 4.5.0
-  '@sveltejs/adapter-cloudflare': 1.0.0-next.6
+  '@sveltejs/adapter-cloudflare': 1.0.0-next.7
   '@sveltejs/adapter-cloudflare-workers': 1.0.0-next.29
+  '@sveltejs/adapter-node': 1.0.0-next.61
   '@sveltejs/kit': 1.0.0-next.225_sass@1.47.0+svelte@3.45.0
   '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.5
   autoprefixer: 10.4.2_postcss@8.4.5
@@ -190,10 +192,16 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/adapter-cloudflare/1.0.0-next.6:
-    resolution: {integrity: sha512-31Ercf8jMLXpMzblrWNraCvfJ1+32+/ahnpaZcX0VTEukkZlS1cIl506m/skuK8Us67bY5CC8P07jjsv4yUEeg==}
+  /@sveltejs/adapter-cloudflare/1.0.0-next.7:
+    resolution: {integrity: sha512-P2rq+Tdvv9IKX4SVrIRqgZ2DnjmpPjp/bhAISs6cgbMzc2AmLMCeN++DXAZAVWugIjF1freLmtXcCl3/0HByNg==}
     dependencies:
       esbuild: 0.13.15
+    dev: true
+
+  /@sveltejs/adapter-node/1.0.0-next.61:
+    resolution: {integrity: sha512-QiH/VBlRuQfw3x9yCrhXPqHvynqA1ai2izDlvc+ZxdWjah5vjds0P6EoP0g4VOJUFKtttQVnGNQrXMUA87T2dw==}
+    dependencies:
+      tiny-glob: 0.2.9
     dev: true
 
   /@sveltejs/kit/1.0.0-next.225_sass@1.47.0+svelte@3.45.0:
@@ -1228,6 +1236,14 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
+    dev: true
+
+  /globalyzer/0.1.0:
+    resolution: {integrity: sha512-40oNTM9UfG6aBmuKxk/giHn5nQ8RVz/SS4Ir6zgzOv9/qC3kKZ9v4etGTcJbEl/NyVQH7FGU7d+X1egr57Md2Q==}
+    dev: true
+
+  /globrex/0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: true
 
   /graceful-fs/4.2.8:
@@ -2623,6 +2639,13 @@ packages:
 
   /timsort/0.3.0:
     resolution: {integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=}
+    dev: true
+
+  /tiny-glob/0.2.9:
+    resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
+    dependencies:
+      globalyzer: 0.1.0
+      globrex: 0.1.2
     dev: true
 
   /tippy.js/6.0.3:
