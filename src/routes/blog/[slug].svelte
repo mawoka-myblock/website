@@ -38,43 +38,43 @@
 	import rehypeStringify from 'rehype-stringify';
 	import rehypeHighlight from 'rehype-highlight';
 	import { DateTime } from 'luxon';
-	import python from 'highlight.js/lib/languages/python';
-	import javascript from 'highlight.js/lib/languages/javascript';
-	import bash from 'highlight.js/lib/languages/bash';
-	import diff from 'highlight.js/lib/languages/diff';
-	import go from 'highlight.js/lib/languages/go';
-	import ini from 'highlight.js/lib/languages/ini';
-	import json from 'highlight.js/lib/languages/json';
-	import markdown from 'highlight.js/lib/languages/markdown';
-	import rust from 'highlight.js/lib/languages/rust';
-	import shell from 'highlight.js/lib/languages/shell';
-	import typescript from 'highlight.js/lib/languages/typescript';
-	import xml from 'highlight.js/lib/languages/xml';
-	import "$lib/hljs.css"
-	import yaml from 'highlight.js/lib/languages/yaml';
+	// import python from 'highlight.js/lib/languages/python';
+	// import javascript from 'highlight.js/lib/languages/javascript';
+	// import bash from 'highlight.js/lib/languages/bash';
+	// import diff from 'highlight.js/lib/languages/diff';
+	// import go from 'highlight.js/lib/languages/go';
+	// import ini from 'highlight.js/lib/languages/ini';
+	// import json from 'highlight.js/lib/languages/json';
+	// import markdown from 'highlight.js/lib/languages/markdown';
+	// import rust from 'highlight.js/lib/languages/rust';
+	// import shell from 'highlight.js/lib/languages/shell';
+	// import typescript from 'highlight.js/lib/languages/typescript';
+	// import xml from 'highlight.js/lib/languages/xml';
+	// import "$lib/hljs.css"
+	// import yaml from 'highlight.js/lib/languages/yaml';
 	const processor = unified()
 		.use(remarkParse)
 		.use(remarkGfm)
 		.use(remarkRehype)
 		.use(rehypeStringify)
 		.use(remarkGemoji)
-		.use(rehypeHighlight, {
-			languages: {
-				javascript,
-				python,
-				bash,
-				diff,
-				go,
-				ini,
-				json,
-				markdown,
-				rust,
-				shell,
-				typescript,
-				xml,
-				yaml
-			}
-		});
+		// .use(rehypeHighlight, {
+		// 	languages: {
+		// 		javascript,
+		// 		python,
+		// 		bash,
+		// 		diff,
+		// 		go,
+		// 		ini,
+		// 		json,
+		// 		markdown,
+		// 		rust,
+		// 		shell,
+		// 		typescript,
+		// 		xml,
+		// 		yaml
+		// 	}
+		// });
 
 	export let post;
 	export let slug;
