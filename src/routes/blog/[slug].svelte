@@ -36,7 +36,7 @@
 	// import remarkGemoji from 'remark-gemoji';
 	// import remarkRehype from 'remark-rehype';
 	// import rehypeStringify from 'rehype-stringify';
-	// import rehypeHighlight from 'rehype-highlight';
+	import rehypeHighlight from 'rehype-highlight';
 	import { DateTime } from 'luxon';
 	// import python from 'highlight.js/lib/languages/python';
 	// import javascript from 'highlight.js/lib/languages/javascript';
