@@ -30,13 +30,13 @@
 </script>
 
 <script>
-	import { unified } from 'unified';
-	import remarkParse from 'remark-parse';
-	import remarkGfm from 'remark-gfm';
-	import remarkGemoji from 'remark-gemoji';
-	import remarkRehype from 'remark-rehype';
-	import rehypeStringify from 'rehype-stringify';
-	import rehypeHighlight from 'rehype-highlight';
+	// import { unified } from 'unified';
+	// import remarkParse from 'remark-parse';
+	// import remarkGfm from 'remark-gfm';
+	// import remarkGemoji from 'remark-gemoji';
+	// import remarkRehype from 'remark-rehype';
+	// import rehypeStringify from 'rehype-stringify';
+	// import rehypeHighlight from 'rehype-highlight';
 	import { DateTime } from 'luxon';
 	// import python from 'highlight.js/lib/languages/python';
 	// import javascript from 'highlight.js/lib/languages/javascript';
@@ -52,12 +52,13 @@
 	// import xml from 'highlight.js/lib/languages/xml';
 	// import "$lib/hljs.css"
 	// import yaml from 'highlight.js/lib/languages/yaml';
-	const processor = unified()
-		.use(remarkParse)
-		.use(remarkGfm)
-		.use(remarkRehype)
-		.use(rehypeStringify)
-		.use(remarkGemoji)
+	import { marked } from 'marked';
+	// const processor = unified()
+	// 	.use(remarkParse)
+	// 	.use(remarkGfm)
+	// 	.use(remarkRehype)
+	// 	.use(rehypeStringify)
+	// 	.use(remarkGemoji)
 		// .use(rehypeHighlight, {
 		// 	languages: {
 		// 		javascript,
@@ -76,12 +77,16 @@
 		// 	}
 		// });
 
+
+
+
 	export let post;
 	export let slug;
 	let content;
 
 	post = post.data[0];
-	content = processor.processSync(post.attributes.content).toString();
+	// content = processor.processSync(post.attributes.content).toString();
+	content = marked.parse(post.attributes.content)
 
 	post = post.attributes;
 	const dt = DateTime.fromISO(post.updatedAt);
