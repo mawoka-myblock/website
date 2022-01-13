@@ -88,7 +88,7 @@
 </script>
 
 <script>
-	import { DateTime } from 'luxon';
+	// import { DateTime } from 'luxon';
 	import {onMount} from "svelte"
 	import hljs from "highlight.js/lib/common"
 	// import tippy from 'sveltejs-tippy';
@@ -115,7 +115,7 @@
 	// content = marked.parse(post.attributes.content);
 
 	post = post.attributes;
-	const dt = DateTime.fromISO(post.updatedAt);
+	// const dt = DateTime.fromISO(post.updatedAt);
 </script>
 
 <svelte:head>
