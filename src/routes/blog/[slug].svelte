@@ -89,16 +89,16 @@
 
 <script>
 	// import { DateTime } from 'luxon';
-	import {onMount} from "svelte"
-	import hljs from "highlight.js/lib/common"
+	// import {onMount} from "svelte"
+	// import hljs from "highlight.js/lib/common"
 	// import tippy from 'sveltejs-tippy';
 	import '@fontsource/marck-script/index.css';
 
 
 
-	onMount(() => {
-		hljs.highlightAll()
-	})
+	// onMount(() => {
+	// 	hljs.highlightAll()
+	// })
 	
 
 	import '$lib/hljs.css';
