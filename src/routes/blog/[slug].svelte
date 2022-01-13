@@ -91,7 +91,7 @@
 	import { DateTime } from 'luxon';
 	import {onMount} from "svelte"
 	import hljs from "highlight.js/lib/common"
-	import tippy from 'sveltejs-tippy';
+	// import tippy from 'sveltejs-tippy';
 	import '@fontsource/marck-script/index.css';
 
 
@@ -140,10 +140,7 @@
 <span class="p-2"
 	><p
 		class="text-center"
-		use:tippy={{
-			content: `In UNIX-Time (Seconds)
-	: ${dt.toFormat('X')}`
-		}}
+		
 	>
 		{dt.toFormat('dd LLLL yyyy')}
 	</p></span
@@ -160,3 +157,9 @@
 		font-family: 'Marck Script';
 	}
 </style>
+<!--
+	use:tippy={{
+			content: `In UNIX-Time (Seconds)
+	: ${dt.toFormat('X')}`
+		}}
+-->
