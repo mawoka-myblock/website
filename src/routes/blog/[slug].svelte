@@ -142,7 +142,7 @@
 		class="text-center"
 		
 	>
-		{dt.toFormat('dd LLLL yyyy')}
+		<!-- {dt.toFormat('dd LLLL yyyy')} -->
 	</p></span
 >
 
