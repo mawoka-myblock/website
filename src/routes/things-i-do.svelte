@@ -37,7 +37,7 @@
 			<p class="text-xl mt-4">Here you can see what I do!</p>
 		</div>
 	</section>
-	<div class="columns mr-3 ml-3 my-8">
+	<div class="mr-3 ml-3 my-8">
 		<div class="column">
 			<h3 class="text-3xl text-center">Where I spent my time on</h3>
 			<h5 class="text-xl text-center">Where I spent the majority of my time</h5>

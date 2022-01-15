@@ -9,3 +9,4 @@ workers-site/
 dist/
 strapi/
 .pnpm-debug.log
+.vercel
