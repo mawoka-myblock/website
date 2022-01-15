@@ -1,7 +1,8 @@
 import preprocess from 'svelte-preprocess'
 //import adapter from '@sveltejs/adapter-node';
 // import adapter from '@sveltejs/adapter-cloudflare-workers';
-import adapter from '@sveltejs/adapter-cloudflare';
+// import adapter from '@sveltejs/adapter-cloudflare';
+import vercel from '@sveltejs/adapter-vercel';
 // import adapter from '@sveltejs/adapter-node';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -19,24 +20,13 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		//adapter: vercel()
-		/*
-		adapter: adapter({
-			// default options are shown
-			out: 'build',
-			precompress: true,
-			env: {
-				host: 'HOST',
-				port: 'PORT'
-			}
-		})
-		*/
 		vite: {
 			optimizeDeps: {
 				include: ['lowlight/lib/common.js', 'lowlight/lib/all.js', 'highlight.js/lib/core']
 			}
 		},
 		// adapter: adapter({ out: 'out' })
-		adapter: adapter()
+		adapter: vercel()
 	}
 };
 

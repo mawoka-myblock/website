@@ -88,18 +88,15 @@
 </script>
 
 <script>
-	// import { DateTime } from 'luxon';
-	// import {onMount} from "svelte"
-	// import hljs from "highlight.js/lib/common"
-	// import tippy from 'sveltejs-tippy';
+	import { DateTime } from 'luxon';
+	import { onMount } from 'svelte';
+	import hljs from 'highlight.js/lib/common';
+	import tippy from 'sveltejs-tippy';
 	import '@fontsource/marck-script/index.css';
 
-
-
-	// onMount(() => {
-	// 	hljs.highlightAll()
-	// })
-	
+	onMount(() => {
+		hljs.highlightAll();
+	});
 
 	import '$lib/hljs.css';
 	// import yaml from 'highlight.js/lib/languages/yaml';
@@ -115,7 +112,7 @@
 	// content = marked.parse(post.attributes.content);
 
 	post = post.attributes;
-	// const dt = DateTime.fromISO(post.updatedAt);
+	const dt = DateTime.fromISO(post.updatedAt);
 </script>
 
 <svelte:head>
@@ -140,9 +137,12 @@
 <span class="p-2"
 	><p
 		class="text-center"
-		
+		use:tippy={{
+			content: `In UNIX-Time (Seconds)
+	: ${dt.toFormat('X')}`
+		}}
 	>
-		<!-- {dt.toFormat('dd LLLL yyyy')} -->
+		{dt.toFormat('dd LLLL yyyy')}
 	</p></span
 >
 
@@ -157,9 +157,3 @@
 		font-family: 'Marck Script';
 	}
 </style>
-<!--
-	use:tippy={{
-			content: `In UNIX-Time (Seconds)
-	: ${dt.toFormat('X')}`
-		}}
--->
