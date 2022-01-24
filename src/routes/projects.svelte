@@ -37,6 +37,13 @@
 			tags: ['python', 'apprise', 'deta'],
 			description:
 				'A script that can send you a notification via apprise if a rss-feed changes.'
+		},
+		{
+			name: "Envwoman",
+			github: "https://github.com/mawoka-myblock/envwoman",
+			website: "https://envwoma.mawoka.eu?utm_source=projects&utm_medium=website",
+			tags: ["rust", "python", "tailwindcss", "python", "mongodb", "dotenv"],
+			description: "An application to sync your dotenv-files securely. This is my first project done with rust."
 		}
 	];
 </script>
