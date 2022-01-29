@@ -24,10 +24,8 @@
 					href="/projects">here</Link
 				>. If you're interested in what I'm spending my time on, you can see that <Link
 					href="/things-i-do">here</Link
-				>. I also self-host things like <Link
-					href="https://tasks.mawoka.eu.org"
-					nofollow={true}>Vikunja</Link
-				>, <Link href="https://doc.mawoka.eu.org" nofollow={true}>HedgeDoc</Link>
+				>. I also have a <a
+				href="/blog" class="hover:underline text-gray-600 transition-transform">Blog</a> and my most recent project is <a class="hover:underline text-gray-600 transition-transform" href="https://envwoman.mawoka.eu">Envwoman</a>
 			</p>
 		</div>
 	</section>
