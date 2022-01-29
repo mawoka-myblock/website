@@ -1,11 +1,27 @@
 <script>
 	const projects = [
 		{
+			name: 'Envwoman',
+			github: 'https://github.com/mawoka-myblock/envwoman',
+			website: 'https://envwoma.mawoka.eu?utm_source=projects&utm_medium=website',
+			tags: ['rust', 'python', 'tailwindcss', 'python', 'mongodb', 'dotenv'],
+			description:
+				'An application to sync your dotenv-files securely. This is my first project done with rust.'
+		},
+		{
 			name: 'Sd-Replacement',
 			github: 'https://github.com/mawoka-myblock/sd-replacement',
 			website: 'https://sdreplacement.mawoka.eu.org',
 			tags: ['javascript', 'fastapi', 'web'],
 			description: 'A macrosystem for the real-life like the StreamDeck by elgato.'
+		},
+		{
+			name: 'Rss2Apprise',
+			github: 'https://github.com/mawoka-myblock/rss2apprise',
+			website: '',
+			tags: ['python', 'apprise', 'deta'],
+			description:
+				'A script that can send you a notification via apprise if a rss-feed changes.'
 		},
 		{
 			name: 'Dienste-App',
@@ -29,21 +45,6 @@
 			tags: ['bulma', 'python', 'jinja2', 'uptime-kuma'],
 			description:
 				'A python-script (with docker-container) that generates a static status-page from data collected by Uptime-Kuma.'
-		},
-		{
-			name: 'Rss2Apprise',
-			github: 'https://github.com/mawoka-myblock/rss2apprise',
-			website: '',
-			tags: ['python', 'apprise', 'deta'],
-			description:
-				'A script that can send you a notification via apprise if a rss-feed changes.'
-		},
-		{
-			name: "Envwoman",
-			github: "https://github.com/mawoka-myblock/envwoman",
-			website: "https://envwoma.mawoka.eu?utm_source=projects&utm_medium=website",
-			tags: ["rust", "python", "tailwindcss", "python", "mongodb", "dotenv"],
-			description: "An application to sync your dotenv-files securely. This is my first project done with rust."
 		}
 	];
 </script>
