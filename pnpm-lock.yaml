@@ -43,10 +43,10 @@ devDependencies:
   '@csstools/postcss-sass': 4.0.0
   '@fontsource/marck-script': 4.5.0
   '@sveltejs/adapter-cloudflare': 1.0.0-next.7
-  '@sveltejs/adapter-cloudflare-workers': 1.0.0-next.29
+  '@sveltejs/adapter-cloudflare-workers': 1.0.0-next.30
   '@sveltejs/adapter-node': 1.0.0-next.61
   '@sveltejs/adapter-vercel': 1.0.0-next.36
-  '@sveltejs/kit': 1.0.0-next.230_sass@1.48.0+svelte@3.46.1
+  '@sveltejs/kit': 1.0.0-next.259_sass@1.48.0+svelte@3.46.1
   '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.13
   autoprefixer: 10.4.2_postcss@8.4.5
   cssnano: 5.0.15_postcss@8.4.5
@@ -185,8 +185,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-cloudflare-workers/1.0.0-next.29:
-    resolution: {integrity: sha512-/hNC1j/dujB+qwIM2c8/H30ZXL8l6Zysdsuk+clrsmohqPLsZKKTrpa+aLWbrsrMQTeaUe9yTVM0t8t52ACjyA==}
+  /@sveltejs/adapter-cloudflare-workers/1.0.0-next.30:
+    resolution: {integrity: sha512-0taEYETmqi/UTDsW124DcREDK3pS1PJYHVVz1bGIUnVhomBit3CoBg/mc6KgjOWapxkjJ2znoHWChqfFqKbKWg==}
     dependencies:
       '@iarna/toml': 2.2.5
       esbuild: 0.13.15
@@ -210,8 +210,8 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.230_sass@1.48.0+svelte@3.46.1:
-    resolution: {integrity: sha512-97i5KK7oDqgzm8rSQTqXsscTt1ajkjlamidaxtADL183NiYWi1kqkOt+mskYU+RverGUuHTNl/8yg5p5ZEZm1A==}
+  /@sveltejs/kit/1.0.0-next.259_sass@1.48.0+svelte@3.46.1:
+    resolution: {integrity: sha512-+Tss6cQXmpi4Jno/ZP0zJ3INBLMED+WeW4UI81tmexheC76Y2p+cbInneKO/REx/8QFo1iroYrWAUkZPsOg8Ew==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:

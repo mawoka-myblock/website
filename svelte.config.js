@@ -1,8 +1,8 @@
 import preprocess from 'svelte-preprocess'
 //import adapter from '@sveltejs/adapter-node';
 // import adapter from '@sveltejs/adapter-cloudflare-workers';
-// import adapter from '@sveltejs/adapter-cloudflare';
-import vercel from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-cloudflare';
+// import vercel from '@sveltejs/adapter-vercel';
 // import adapter from '@sveltejs/adapter-node';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -26,7 +26,8 @@ const config = {
 			}
 		},
 		// adapter: adapter({ out: 'out' })
-		adapter: vercel()
+		// adapter: vercel()
+		adapter: adapter()
 	}
 };
 
