@@ -18,7 +18,6 @@ const config = {
 
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
 		//adapter: vercel()
 		vite: {
 			optimizeDeps: {
@@ -27,9 +26,10 @@ const config = {
 		},
 		// adapter: adapter({ out: 'out' })
 		// adapter: vercel()
-		
+
 		adapter: adapter()
 	}
 };
 
 export default config;
+
