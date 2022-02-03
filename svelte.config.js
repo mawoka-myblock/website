@@ -27,6 +27,7 @@ const config = {
 		},
 		// adapter: adapter({ out: 'out' })
 		// adapter: vercel()
+		
 		adapter: adapter()
 	}
 };
