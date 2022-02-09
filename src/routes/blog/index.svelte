@@ -3,7 +3,7 @@
 
 	export const load: Load = async ({ fetch }) => {
 		const res = await fetch(
-			'https://strapi.myblock.eu.org/api/articles?sort[0]=createdAt%3Adesc'
+			'https://strapi.mawoka.eu/api/articles?sort[0]=createdAt%3Adesc'
 		);
 		const data = await res.json();
 
