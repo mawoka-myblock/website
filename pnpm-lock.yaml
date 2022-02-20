@@ -4,8 +4,6 @@ specifiers:
   '@csstools/postcss-sass': ^4.0.0
   '@fontsource/marck-script': ^4.5.0
   '@sveltejs/adapter-auto': ^1.0.0-next.17
-  '@sveltejs/adapter-cloudflare': link:/home/mawoka/Mawoka/svelte-kit/packages/adapter-cloudflare
-  '@sveltejs/adapter-cloudflare-workers': next
   '@sveltejs/adapter-node': ^1.0.0-next.61
   '@sveltejs/adapter-vercel': ^1.0.0-next.36
   '@sveltejs/kit': next
@@ -45,8 +43,6 @@ devDependencies:
   '@csstools/postcss-sass': 4.0.0
   '@fontsource/marck-script': 4.5.0
   '@sveltejs/adapter-auto': 1.0.0-next.17
-  '@sveltejs/adapter-cloudflare': link:../svelte-kit/packages/adapter-cloudflare
-  '@sveltejs/adapter-cloudflare-workers': 1.0.0-next.33
   '@sveltejs/adapter-node': 1.0.0-next.61
   '@sveltejs/adapter-vercel': 1.0.0-next.36
   '@sveltejs/kit': 1.0.0-next.278_sass@1.48.0+svelte@3.46.1
@@ -195,13 +191,6 @@ packages:
       '@sveltejs/adapter-cloudflare': 1.0.0-next.9
       '@sveltejs/adapter-netlify': 1.0.0-next.44
       '@sveltejs/adapter-vercel': 1.0.0-next.39
-    dev: true
-
-  /@sveltejs/adapter-cloudflare-workers/1.0.0-next.33:
-    resolution: {integrity: sha512-Vn3UraaT8WZ9AMMiOeTCoMDepl3LSIMQXfde90I1SDd48/tjTwCSyPwM6nGawqJPvAv2xgWno9jSvGJWKkcxQw==}
-    dependencies:
-      '@iarna/toml': 2.2.5
-      esbuild: 0.14.21
     dev: true
 
   /@sveltejs/adapter-cloudflare/1.0.0-next.9:
