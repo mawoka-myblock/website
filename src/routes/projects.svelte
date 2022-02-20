@@ -9,6 +9,12 @@
 				'An application to sync your dotenv-files securely. This is my first project done with rust.'
 		},
 		{
+			name: "ImNote",
+			github: "https://github.com/mawoka-myblock/imnote",
+			website: "https://imnote.mawoka.eu?utm_source=projects&utm_medium=website",
+			tags: ["javascript", "sveltekit", "svelte", "prismajs", "tailwind"]
+		},
+		{
 			name: 'Sd-Replacement',
 			github: 'https://github.com/mawoka-myblock/sd-replacement',
 			website: 'https://sdreplacement.mawoka.eu.org',
