@@ -15,7 +15,7 @@ export async function get({url}) {
 	} else {
 		return {
 			headers: {
-				location: links[req.query.get('token')]
+				location: links[url.searchParams.get("token")]
 			},
 			body: {},
 			status: 307
