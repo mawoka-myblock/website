@@ -1,11 +1,9 @@
 <script context="module">
 	import qs from 'qs';
-	export const rerunLoad = true
 	import { micromark } from 'micromark';
 	import { gfm, gfmHtml } from 'micromark-extension-gfm';
 
-	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ params, fetch }) {
+	export const load = async ({ params, fetch }) => {
 		const query = qs.stringify({
 			filters: {
 				slug: {
@@ -81,7 +79,6 @@
 	<meta name="twitter:title" content="Mawoka's Blog - {post.title}" />
 	<meta name="twitter:description" content={post.description} />
 	<meta name="twitter:creator" content="@mawoka_" />
-	<!-- <meta name="twitter:image" content="https://www.byeindonesia.com/og-bye-indonesia.png" /> -->
 </svelte:head>
 
 <h1 class="text-center text-8xl marck-script">{post.title}</h1>
