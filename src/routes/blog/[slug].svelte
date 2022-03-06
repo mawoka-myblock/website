@@ -1,60 +1,9 @@
 <script context="module">
 	import qs from 'qs';
-
-	/* Markdown-rendering */
-	// import python from 'highlight.js/lib/languages/python';
-	// import javascript from 'highlight.js/lib/languages/javascript';
-	// import bash from 'highlight.js/lib/languages/bash';
-	// import diff from 'highlight.js/lib/languages/diff';
-	// import go from 'highlight.js/lib/languages/go';
-	// import ini from 'highlight.js/lib/languages/ini';
-	// import json from 'highlight.js/lib/languages/json';
-	// import markdown from 'highlight.js/lib/languages/markdown';
-	// import rust from 'highlight.js/lib/languages/rust';
-	// import shell from 'highlight.js/lib/languages/shell';
-	// import typescript from 'highlight.js/lib/languages/typescript';
-	// import xml from 'highlight.js/lib/languages/xml';
-	// import marked from 'marked';
-	// import hljs from 'highlight.js';
-	// import { Remarkable } from 'remarkable';
 	import { micromark } from 'micromark';
 	import { gfm, gfmHtml } from 'micromark-extension-gfm';
 
-	// import { unified } from 'unified';
-	// import remarkParse from 'remark-parse';
-	// import remarkGfm from 'remark-gfm';
-	// import remarkGemoji from 'remark-gemoji';
-	// import remarkRehype from 'remark-rehype';
-	// import rehypeStringify from 'rehype-stringify';
-	// import rehypeHighlight from 'rehype-highlight';
-
 	export const load = async ({ params, fetch }) => {
-		// const processor = unified()
-		// 	.use(remarkParse)
-		// 	.use(remarkGfm)
-		// 	.use(remarkRehype)
-		// 	.use(rehypeStringify)
-		// 	.use(remarkGemoji)
-		// 	.use(rehypeHighlight, {
-		// 		languages: {
-		// 			javascript,
-		// 			python,
-		// 			bash,
-		// 			diff,
-		// 			go,
-		// 			ini,
-		// 			json,
-		// 			markdown,
-		// 			rust,
-		// 			shell,
-		// 			typescript,
-		// 			xml,
-		// 			yaml
-		// 		}
-		// 	});
-		// The params object will contain all of the parameters in the route.
-
-		// Now, we'll fetch the blog post from Strapi
 		const query = qs.stringify({
 			filters: {
 				slug: {
@@ -130,7 +79,6 @@
 	<meta name="twitter:title" content="Mawoka's Blog - {post.title}" />
 	<meta name="twitter:description" content={post.description} />
 	<meta name="twitter:creator" content="@mawoka_" />
-	<!-- <meta name="twitter:image" content="https://www.byeindonesia.com/og-bye-indonesia.png" /> -->
 </svelte:head>
 
 <h1 class="text-center text-8xl marck-script">{post.title}</h1>
