@@ -1,7 +1,7 @@
-import preprocess from 'svelte-preprocess'
+import preprocess from 'svelte-preprocess';
 //import adapter from '@sveltejs/adapter-node';
 // import adapter from '@sveltejs/adapter-cloudflare-workers';
-import adapter from "@sveltejs/adapter-auto"
+import adapter from '@sveltejs/adapter-auto';
 // import adapter from '@sveltejs/adapter-cloudflare';
 // import vercel from '@sveltejs/adapter-vercel';
 // import adapter from '@sveltejs/adapter-node';
@@ -33,4 +33,3 @@ const config = {
 };
 
 export default config;
-

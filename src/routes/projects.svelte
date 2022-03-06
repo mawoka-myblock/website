@@ -1,6 +1,14 @@
 <script>
 	const projects = [
 		{
+			name: 'ClassQuiz',
+			github: 'https://github.com/mawoka-myblock/ClassQuiz',
+			website: 'https://classquiz.mawoka.eu?utm_source=projects&utm_medium=website',
+			tags: ['KAHOOT!', 'svelte', 'ormar', 'fastapi', 'tailwindcss', 'postgres'],
+			description:
+				'A quiz-app, like KAHOOT!. Create quizzes and play in real-time agains your friends or in class!'
+		},
+		{
 			name: 'Envwoman',
 			github: 'https://github.com/mawoka-myblock/envwoman',
 			website: 'https://envwoma.mawoka.eu?utm_source=projects&utm_medium=website',
@@ -9,10 +17,10 @@
 				'An application to sync your dotenv-files securely. This is my first project done with rust.'
 		},
 		{
-			name: "ImNote",
-			github: "https://github.com/mawoka-myblock/imnote",
-			website: "https://imnote.mawoka.eu?utm_source=projects&utm_medium=website",
-			tags: ["javascript", "sveltekit", "svelte", "prismajs", "tailwind"]
+			name: 'ImNote',
+			github: 'https://github.com/mawoka-myblock/imnote',
+			website: 'https://imnote.mawoka.eu?utm_source=projects&utm_medium=website',
+			tags: ['javascript', 'sveltekit', 'svelte', 'prismajs', 'tailwindcss']
 		},
 		{
 			name: 'Sd-Replacement',
