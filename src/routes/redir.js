@@ -1,7 +1,7 @@
 /**
  * @type {import('@sveltejs/kit').RequestHandler}
  */
-export async function get(url) {
+ export async function get({url}) {
 	const links = {
 		1: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
 		2: 'https://netcup.de'
@@ -15,7 +15,7 @@ export async function get(url) {
 	} else {
 		return {
 			headers: {
-				location: links[req.query.get('token')]
+				location: links[url.searchParams.get("token")]
 			},
 			body: {},
 			status: 307
