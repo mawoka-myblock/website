@@ -11,7 +11,7 @@
 				}
 			}
 		});
-		const res = await fetch('https://strapi.myblock.eu.org/api/articles?' + query);
+		const res = await fetch('https://strapi.mawoka.eu/api/articles?' + query);
 
 		// A 404 status means "NOT FOUND"
 		if (res.status === 404) {
