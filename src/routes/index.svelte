@@ -29,7 +29,7 @@
 				and my most recent project is
 				<a
 					class="hover:underline text-gray-600 transition-transform"
-					href="https://envwoman.mawoka.eu">Envwoman</a
+					href="https://classquiz.mawoka.eu">ClassQuiz</a
 				>.
 			</p>
 		</div>

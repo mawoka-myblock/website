@@ -1,13 +1,13 @@
 /**
  * @type {import('@sveltejs/kit').RequestHandler}
  */
-export async function get(req) {
+export async function get(url) {
 	const links = {
 		1: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
 		2: 'https://netcup.de'
 	};
 
-	if (links[req.query.get('token')] == undefined) {
+	if (links[url.searchParams.get("token")] == undefined) {
 		return {
 			status: 404,
 			body: 'WRONG TOKEN YOU IDIOT!'
