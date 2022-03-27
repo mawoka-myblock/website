@@ -1,0 +1,35 @@
+{
+    "1": {
+        "title": "Actively maintained",
+        "fix_bugs": true,
+        "fix_security_issues": true,
+        "new_features": true
+    },
+    "2": {
+        "title": "Maintained",
+        "fix_bugs": true,
+        "fix_security_issues": true,
+        "new_features": false
+    },
+    "3": {
+        "title": "Security-fixes only",
+        "fix_bugs": false,
+        "fix_security_issues": true,
+        "new_features": false,
+        "revivie_if_interested": true
+    },
+    "4": {
+        "title": "Abonded",
+        "fix_bugs": false,
+        "fix_security_issues": false,
+        "new_features": false,
+        "revivie_if_interested": true
+    },
+    "5": {
+        "title": "Dead",
+        "fix_bugs": false,
+        "fix_security_issues": false,
+        "new_features": false,
+        "revivie_if_interested": false
+    }
+}
