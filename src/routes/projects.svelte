@@ -11,7 +11,7 @@
 		{
 			name: 'Envwoman',
 			github: 'https://github.com/mawoka-myblock/envwoman',
-			website: 'https://envwoma.mawoka.eu?utm_source=projects&utm_medium=website',
+			website: 'https://envwoman.mawoka.eu?utm_source=projects&utm_medium=website',
 			tags: ['rust', 'python', 'tailwindcss', 'python', 'mongodb', 'dotenv'],
 			description:
 				'An application to sync your dotenv-files securely. This is my first project done with rust.'
