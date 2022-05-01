@@ -20,7 +20,8 @@
 			name: 'ImNote',
 			github: 'https://github.com/mawoka-myblock/imnote',
 			website: 'https://imnote.mawoka.eu?utm_source=projects&utm_medium=website',
-			tags: ['javascript', 'sveltekit', 'svelte', 'prismajs', 'tailwindcss']
+			tags: ['javascript', 'sveltekit', 'svelte', 'prismajs', 'tailwindcss'],
+			description: "A normal note-app, but focused on Images, instead of texts."
 		},
 		{
 			name: 'Sd-Replacement',
