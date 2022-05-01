@@ -6,7 +6,7 @@
 			website: 'https://classquiz.mawoka.eu?utm_source=projects&utm_medium=website',
 			tags: ['KAHOOT!', 'svelte', 'ormar', 'fastapi', 'tailwindcss', 'postgres'],
 			description:
-				'A quiz-app, like KAHOOT!. Create quizzes and play in real-time agains your friends or in class!'
+				'A quiz-app, like KAHOOT!. Create quizzes and play in real-time against your friends or in class!'
 		},
 		{
 			name: 'Envwoman',
@@ -27,7 +27,7 @@
 			name: 'Sd-Replacement',
 			github: 'https://github.com/mawoka-myblock/sd-replacement',
 			website: 'https://sdreplacement.mawoka.eu.org',
-			tags: ['javascript', 'fastapi', 'web'],
+			tags: ['flutter', 'socket.io', 'web', 'dart', 'rust'],
 			description: 'A macrosystem for the real-life like the StreamDeck by elgato.'
 		},
 		{
@@ -51,7 +51,7 @@
 			github: '',
 			website: '',
 			tags: ['pywebio', 'fastapi', 'mongodb'],
-			description: 'A program to learn vocab'
+			description: 'A program to learn vocab. This is also my first project ever.'
 		},
 		{
 			name: 'uptime-kuma-static',
