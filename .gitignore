@@ -10,3 +10,4 @@ dist/
 strapi/
 .pnpm-debug.log
 .vercel
+.idea
