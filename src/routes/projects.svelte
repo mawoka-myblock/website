@@ -6,12 +6,12 @@
 			website: 'https://classquiz.mawoka.eu?utm_source=projects&utm_medium=website',
 			tags: ['KAHOOT!', 'svelte', 'ormar', 'fastapi', 'tailwindcss', 'postgres'],
 			description:
-				'A quiz-app, like KAHOOT!. Create quizzes and play in real-time agains your friends or in class!'
+				'A quiz-app, like KAHOOT!. Create quizzes and play in real-time against your friends or in class!'
 		},
 		{
 			name: 'Envwoman',
 			github: 'https://github.com/mawoka-myblock/envwoman',
-			website: 'https://envwoma.mawoka.eu?utm_source=projects&utm_medium=website',
+			website: 'https://envwoman.mawoka.eu?utm_source=projects&utm_medium=website',
 			tags: ['rust', 'python', 'tailwindcss', 'python', 'mongodb', 'dotenv'],
 			description:
 				'An application to sync your dotenv-files securely. This is my first project done with rust.'
@@ -20,13 +20,14 @@
 			name: 'ImNote',
 			github: 'https://github.com/mawoka-myblock/imnote',
 			website: 'https://imnote.mawoka.eu?utm_source=projects&utm_medium=website',
-			tags: ['javascript', 'sveltekit', 'svelte', 'prismajs', 'tailwindcss']
+			tags: ['javascript', 'sveltekit', 'svelte', 'prismajs', 'tailwindcss'],
+			description: "A normal note-app, but focused on Images, instead of texts."
 		},
 		{
 			name: 'Sd-Replacement',
 			github: 'https://github.com/mawoka-myblock/sd-replacement',
 			website: 'https://sdreplacement.mawoka.eu.org',
-			tags: ['javascript', 'fastapi', 'web'],
+			tags: ['flutter', 'socket.io', 'web', 'dart', 'rust'],
 			description: 'A macrosystem for the real-life like the StreamDeck by elgato.'
 		},
 		{
@@ -50,7 +51,7 @@
 			github: '',
 			website: '',
 			tags: ['pywebio', 'fastapi', 'mongodb'],
-			description: 'A program to learn vocab'
+			description: 'A program to learn vocab. This is also my first project ever.'
 		},
 		{
 			name: 'uptime-kuma-static',
