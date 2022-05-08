@@ -5,6 +5,7 @@ import adapter from '@sveltejs/adapter-auto';
 // import adapter from '@sveltejs/adapter-cloudflare';
 // import vercel from '@sveltejs/adapter-vercel';
 // import adapter from '@sveltejs/adapter-node';
+import path from 'path';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// preprocess: [
@@ -23,6 +24,11 @@ const config = {
 		vite: {
 			optimizeDeps: {
 				include: ['lowlight/lib/common.js', 'lowlight/lib/all.js', 'highlight.js/lib/core']
+			},
+			resolve: {
+				alias: {
+					"$src": path.resolve("./src")
+				}
 			}
 		},
 		// adapter: adapter({ out: 'out' })
