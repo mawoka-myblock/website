@@ -1,17 +1,6 @@
 <script context="module">
-	import qs from 'qs';
-	import { micromark } from 'micromark';
-	import { gfm, gfmHtml } from 'micromark-extension-gfm';
-
 	export const load = async ({ params, fetch }) => {
-		const query = qs.stringify({
-			filters: {
-				slug: {
-					$eq: params.slug
-				}
-			}
-		});
-		const res = await fetch('https://strapi.mawoka.eu/api/articles?' + query);
+		const res = await fetch("https://pbe.mawoka.eu/api/v1/public/rendered?slug=" + params.slug);
 
 		// A 404 status means "NOT FOUND"
 		if (res.status === 404) {
@@ -23,13 +12,7 @@
 			const data = await res.json();
 			return {
 				props: {
-					post: data,
-					slug: params.slug,
-					content: micromark(data.data[0].attributes.content, {
-						extensions: [gfm()],
-						allowDangerousHtml: true,
-						htmlExtensions: [gfmHtml()]
-					})
+					post: data
 				}
 			};
 		}
@@ -52,36 +35,32 @@
 	// import { marked } from 'marked';
 
 	export let post;
-	export let slug;
-	export let content;
 	// let content;
 
-	post = post.data[0];
 	// content = processor.processSync(post.attributes.content).toString();
 	// content = marked.parse(post.attributes.content);
 
-	post = post.attributes;
-	const dt = DateTime.fromISO(post.updatedAt);
+	const dt = DateTime.fromISO(post.metadata.updated_at);
 </script>
 
 <svelte:head>
 	<title>Mawoka's Blog - {post.title}</title>
-	<meta name="description" content={post.description} />
+	<meta name="description" content={post.metadata.description} />
 
-	<meta property="og:url" content="https://mawoka.eu/blog/{slug}" />
+	<meta property="og:url" content="https://mawoka.eu/blog/{post.metadata.slug}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Mawoka's Blog - {post.title}" />
 	<meta property="og:description" content={post.description} />
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:domain" content="mawoka.eu" />
-	<meta name="twitter:url" content="https://mawoka.eu/blog/{slug}" />
-	<meta name="twitter:title" content="Mawoka's Blog - {post.title}" />
-	<meta name="twitter:description" content={post.description} />
+	<meta name="twitter:url" content="https://mawoka.eu/blog/{post.metadata.slug}" />
+	<meta name="twitter:title" content="Mawoka's Blog - {post.metadata.title}" />
+	<meta name="twitter:description" content={post.metadata.intro} />
 	<meta name="twitter:creator" content="@mawoka_" />
 </svelte:head>
 
-<h1 class="text-center text-8xl marck-script">{post.title}</h1>
+<h1 class="text-center text-8xl marck-script">{post.metadata.title}</h1>
 <span class="p-2"
 	><p
 		class="text-center"
@@ -97,7 +76,7 @@
 <article
 	class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-10 prose-pink text-yellow-50 px-4"
 >
-	{@html content}
+	{@html post.content}
 </article>
 
 <style lang="scss">

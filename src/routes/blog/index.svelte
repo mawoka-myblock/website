@@ -3,7 +3,7 @@
 
 	export const load: Load = async ({ fetch }) => {
 		const res = await fetch(
-			'https://strapi.mawoka.eu/api/articles?sort[0]=createdAt%3Adesc'
+			'https://pbe.mawoka.eu/api/v1/public/posts?offset=0'
 		);
 		const data = await res.json();
 
@@ -23,12 +23,12 @@
 </section>
 
 <div class="container mx-auto mt-4">
-	{#each posts['data'] as post}
-		<a href="/blog/{post.attributes.slug}">
+	{#each posts as post}
+		<a href="/blog/{post.slug}">
 			<div
 				class="cursor-pointer px-6 py-2 my-8 hover:backdrop-blur-md hover:bg-white/30 transition"
 			>
-				<p><b>{post.attributes.title}</b>: {post.attributes.description}</p>
+				<p><b>{post.title}</b>: {post.intro}</p>
 			</div>
 		</a>
 	{/each}
