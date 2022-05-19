@@ -1,6 +1,12 @@
 <script>
 	const projects = [
 		{
+			name: "PersonalBlogEngine",
+			github: "https://github.com/mawoka-myblock/personalblogengine/",
+			tags: ["rust", "actix", "postgres", "svelte", "tailwind"],
+			description: "PersonalBlogEngine is a markdown-based headless CMS for your own personal blog."
+		},
+		{
 			name: 'ClassQuiz',
 			github: 'https://github.com/mawoka-myblock/ClassQuiz',
 			website: 'https://classquiz.mawoka.eu?utm_source=projects&utm_medium=website',
