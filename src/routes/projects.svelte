@@ -1,6 +1,13 @@
 <script>
 	const projects = [
 		{
+			name: "SimpleSelfhostAuth",
+			github: "https://github.com/mawoka-myblock/SimpleSelfhostAuth",
+			tags: ["rust", "actix", "actix", "auth", "svelte", "tailwind", "nginx"],
+			website: "https://ssa.mawoka.eu/",
+			description: "An app which you can use to protect your self-hosted websites with an authentication."
+		},
+		{
 			name: "PersonalBlogEngine",
 			github: "https://github.com/mawoka-myblock/personalblogengine/",
 			tags: ["rust", "actix", "postgres", "svelte", "tailwind"],
