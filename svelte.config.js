@@ -22,9 +22,6 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		//adapter: vercel()
 		vite: {
-			optimizeDeps: {
-				include: ['lowlight/lib/common.js', 'lowlight/lib/all.js', 'highlight.js/lib/core']
-			},
 			resolve: {
 				alias: {
 					"$src": path.resolve("./src")
