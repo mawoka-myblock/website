@@ -15,8 +15,9 @@
 </script>
 
 <script lang="ts">
-  import Maintenance_status_lists from './maintenance-status-lists.svelte';
+	import Maintenance_status_lists from './maintenance-status-lists.svelte';
 
+	// eslint-disable-next-line ParseError
 	export let status_id: string;
 
 	interface maintain_statatus {
@@ -37,6 +38,6 @@
 		</div>
 	</section>
 	<section>
-		<Maintenance_status_lists data={data} />
+		<Maintenance_status_lists {data} />
 	</section>
 </div>

@@ -1,10 +1,9 @@
 <script lang="ts" context="module">
+	// eslint-disable-next-line ParseError
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({ fetch }) => {
-		const res = await fetch(
-			'https://pbe.mawoka.eu/api/v1/public/posts?offset=0'
-		);
+		const res = await fetch('https://pbe.mawoka.eu/api/v1/public/posts?offset=0');
 		const data = await res.json();
 
 		return { props: { posts: data } };
@@ -12,8 +11,12 @@
 </script>
 
 <script>
+	import PostList from '../../lib/PostList.svelte';
+
 	export let posts;
 </script>
+
+<svelte:head><title>Mawoka's Blog</title></svelte:head>
 
 <section class="section">
 	<div class="container pt-12 text-center">
@@ -23,15 +26,7 @@
 </section>
 
 <div class="container mx-auto mt-4">
-	{#each posts as post}
-		<a href="/blog/{post.slug}">
-			<div
-				class="cursor-pointer px-6 py-2 my-8 hover:backdrop-blur-md hover:bg-white/30 transition"
-			>
-				<p><b>{post.title}</b>: {post.intro}</p>
-			</div>
-		</a>
-	{/each}
+	<PostList {posts} />
 
 	<!-- <a href="https://g.co" class="link text-black">LOL</a> -->
 </div>

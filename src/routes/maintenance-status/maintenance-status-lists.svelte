@@ -1,4 +1,5 @@
 <script lang="ts">
+	// eslint-disable-next-line ParseError
 	export let data: maintain_statatus;
 
 	interface maintain_statatus {
