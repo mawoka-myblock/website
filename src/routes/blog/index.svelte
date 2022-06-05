@@ -11,6 +11,8 @@
 </script>
 
 <script>
+	import PostList from '../../lib/PostList.svelte';
+
 	export let posts;
 </script>
 
@@ -24,15 +26,7 @@
 </section>
 
 <div class="container mx-auto mt-4">
-	{#each posts as post}
-		<a href="/blog/{post.slug}">
-			<div
-				class="cursor-pointer px-6 py-2 my-8 hover:backdrop-blur-md hover:bg-white/30 transition"
-			>
-				<p><b>{post.title}</b>: {post.intro}</p>
-			</div>
-		</a>
-	{/each}
+	<PostList {posts} />
 
 	<!-- <a href="https://g.co" class="link text-black">LOL</a> -->
 </div>
