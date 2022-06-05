@@ -1,6 +1,6 @@
 <script context="module">
 	export const load = async ({ params, fetch }) => {
-		const res = await fetch("https://pbe.mawoka.eu/api/v1/public/rendered?slug=" + params.slug);
+		const res = await fetch('https://pbe.mawoka.eu/api/v1/public/rendered?slug=' + params.slug);
 
 		// A 404 status means "NOT FOUND"
 		if (res.status === 404) {

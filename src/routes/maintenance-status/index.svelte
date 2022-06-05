@@ -2,7 +2,6 @@
 	import MaintenanceStatusLists from './maintenance-status-lists.svelte';
 	import json_data from './status.json';
 
-
 	const maintain_statuses_ids = Object.entries(json_data);
 	console.log(maintain_statuses_ids);
 </script>
