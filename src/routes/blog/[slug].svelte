@@ -41,6 +41,13 @@
 	};
 
 	const submitFeedback = async (like: boolean): Promise<void> => {
+		let feedback_text = undefined;
+		if (!like) {
+			feedback_text = prompt("What don't you like?");
+			if (feedback_text === '') {
+				feedback_text = undefined;
+			}
+		}
 		const res = await fetch('https://pbe.mawoka.eu/api/v1/feedback/', {
 			method: 'POST',
 			headers: {
@@ -48,7 +55,8 @@
 			},
 			body: JSON.stringify({
 				thumbs_up: like,
-				post_slug: post.metadata.slug
+				post_slug: post.metadata.slug,
+				feedback: feedback_text
 			})
 		});
 		if (res.status === 200) {
