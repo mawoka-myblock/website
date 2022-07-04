@@ -53,7 +53,7 @@
 			</div>
 			<div class="mt-4 center">
 				<a
-					href="https://t.me/mawokag"
+					href="https://t.me/mawoka"
 					on:click={() => {
 						plausible('Contact', { props: { media: 'Telegram' } });
 					}}
