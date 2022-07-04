@@ -1,12 +1,8 @@
 <script>
 	import '@fontsource/marck-script/index.css';
 	let openMenu = true;
-	let closeMenu = false;
-	let menuItems = false;
 	const toggleMenu = () => {
 		openMenu = !openMenu;
-		closeMenu = !closeMenu;
-		menuItems = !menuItems;
 	};
 </script>
 
@@ -22,27 +18,27 @@
 
 		<!-- Our open/close buttons -->
 		<!-- Open menu -->
-		<button class="lg:hidden" id="open-menu" on:click={toggleMenu} class:hidden={!openMenu}>
+		<button class="lg:hidden" on:click={toggleMenu} class:hidden={!openMenu}>
 			<svg
+			class="text-black"
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
 				height="24"
 				viewBox="0 0 24 24"
-				fill="none"
 				stroke="currentColor"
 				stroke-width="2"
 				stroke-linecap="round"
 				stroke-linejoin="round"
 				display="block"
-				id="TextAlignJustified"
 			>
 				<path d="M3 6h18M3 12h18M3 18h18" />
 			</svg>
 		</button>
 
 		<!-- Close menu -->
-		<button class="hidden" id="close-menu" class:hidden={!closeMenu} on:click={toggleMenu}>
+		<button class="hidden" class:hidden={openMenu} on:click={toggleMenu}>
 			<svg
+			class="text-black"
 				xmlns="http://www.w3.org/2000/svg"
 				width="14"
 				height="14"
@@ -53,7 +49,6 @@
 				stroke-linecap="round"
 				stroke-linejoin="round"
 				display="block"
-				id="Cross"
 			>
 				<path d="M20 20L4 4m16 0L4 20" />
 			</svg>
@@ -62,9 +57,8 @@
 
 	<!-- Our list of items -->
 	<ul
-		id="menu-items"
 		class="lg:flex w-full flex-col lg:flex-row lg:pl-6"
-		class:hidden={!menuItems}
+		class:hidden={openMenu}
 	>
 		<li class="py-2">
 			<a

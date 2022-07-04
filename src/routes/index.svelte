@@ -20,17 +20,11 @@
 	<section>
 		<div class="container lg:px-96 px-8">
 			<p class="flow-text">
-				Nice to meet you here. I build stuff and I got a list of them, <Link
-					href="/projects">here</Link
-				>. If you're interested in what I'm spending my time on, you can see that <Link
-					href="/things-i-do">here</Link
-				>. I also have a
-				<a href="/blog" class="hover:underline text-gray-600 transition-transform">Blog</a>
-				and my most recent project is
-				<a
-					class="hover:underline text-gray-600 transition-transform"
-					href="https://classquiz.mawoka.eu">ClassQuiz</a
-				>.
+				I am a passionate web-developer and the author of my own <a href="/blog" class="a-link"
+					>blog</a
+				>
+				and my biggest project, <a href="https://classquiz.de" class="a-link">ClassQuiz</a>, an open-source
+				Kahoot!-alternative. Since these aren't my only projects, I got a <a href="/projects" class="a-link">list of them</a>.
 			</p>
 		</div>
 	</section>

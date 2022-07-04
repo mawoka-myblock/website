@@ -40,7 +40,8 @@
 					I worked with for a bit. Then I discovered
 					<a href="https://svelte.dev">Svelte</a>, which made my life easier, so I used it
 					with FastAPI and MongoDB and now I am a Junior-Full-Stack-Web-Developer and I am
-					getting better and better every week!
+					getting better and better every week! Now, I am programming daily and I am
+					learning new stuff, as well!
 				</p>
 			</div>
 		</div>

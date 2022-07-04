@@ -12,6 +12,7 @@
 			name: 'PersonalBlogEngine',
 			github: 'https://github.com/mawoka-myblock/personalblogengine/',
 			tags: ['rust', 'actix', 'postgres', 'svelte', 'tailwind'],
+			website: "", 
 			description:
 				'PersonalBlogEngine is a markdown-based headless CMS for your own personal blog.'
 		},
