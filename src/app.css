@@ -21,4 +21,10 @@
 	.hljs {
 		@apply bg-slate-800;
 	}
+	.a-link {
+		@apply bg-gradient-to-t bg-opacity-60 from-sky-700 via-transparent to-transparent
+		px-1 rounded-b-md
+		transition-all duration-300
+		hover:bg-sky-700 hover:rounded-lg 
+	}
 }

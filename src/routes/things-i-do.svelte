@@ -19,9 +19,11 @@
 		{ tech: 'FastAPI', link: 'https://fastapi.tiangolo.com', level: 5 },
 		{ tech: 'Python', link: 'https://python.org', level: 4 },
 		{ tech: 'MongoDB', link: 'https://mongodb.com', level: 3 },
-		{ tech: 'Svelte', link: 'https://svelte.dev', level: 3 },
-		{ tech: 'Linux', link: '', level: 3 },
-		{ tech: 'Java', link: '', level: 1 }
+		{ tech: 'Rust', link: 'https://rust-lang.org', level: 2 },
+		{ tech: 'Svelte', link: 'https://svelte.dev', level: 4 },
+		{ tech: 'JavaScript', link: '', level: 3 },
+		{ tech: 'Linux', link: '', level: 3 }
+		// { tech: 'Java', link: '', level: 1 }
 	];
 	export let res = [];
 </script>

@@ -12,6 +12,7 @@
 			name: 'PersonalBlogEngine',
 			github: 'https://github.com/mawoka-myblock/personalblogengine/',
 			tags: ['rust', 'actix', 'postgres', 'svelte', 'tailwind'],
+			website: "", 
 			description:
 				'PersonalBlogEngine is a markdown-based headless CMS for your own personal blog.'
 		},
@@ -35,7 +36,8 @@
 			name: 'ImNote',
 			github: 'https://github.com/mawoka-myblock/imnote',
 			website: 'https://imnote.mawoka.eu?utm_source=projects&utm_medium=website',
-			tags: ['javascript', 'sveltekit', 'svelte', 'prismajs', 'tailwindcss']
+			tags: ['javascript', 'sveltekit', 'svelte', 'prismajs', 'tailwindcss'],
+			description: "Notes, but focused on images, not text"
 		},
 		{
 			name: 'Sd-Replacement',
