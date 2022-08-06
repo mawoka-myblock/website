@@ -11,7 +11,8 @@ const config = {
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
-						color: theme('colors.yellow.50'),
+						color: '#000',
+						/*color: theme('colors.yellow.50'),
 						textDecoration: 'none',
 						a: {
 							color: theme('colors.blue.200')
@@ -36,7 +37,7 @@ const config = {
 						},
 						strong: {
 							color: theme('colors.yellow.50')
-						},
+						},*/
 						'code::before': {
 							content: '""',
 							'padding-left': '0.25rem'

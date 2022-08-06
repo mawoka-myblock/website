@@ -44,24 +44,24 @@
 			<h3 class="text-3xl text-center">Where I spent my time on</h3>
 			<h5 class="text-xl text-center">Where I spent the majority of my time</h5>
 			<div class="center mt-4">
-				<table class="max-w-5xl mx-auto table-auto border-2 border-gray-200">
+				<table class="max-w-5xl mx-auto table-auto border-2 border-black">
 					<thead class="justify-between">
 						<tr>
 							<th class="px-16 py-2">
-								<span class="text-gray-100 font-semibold">Language</span>
+								<span class="text-gray-900 font-semibold">Language</span>
 							</th>
 							<th class="px-16 py-2">
-								<span class="text-gray-100 font-semibold">Time</span>
+								<span class="text-gray-900 font-semibold">Time</span>
 							</th>
 							<th class="px-16 py-2">
-								<span class="text-gray-100 font-semibold">Percent</span>
+								<span class="text-gray-900 font-semibold">Percent</span>
 							</th>
 						</tr>
 					</thead>
 					<tbody>
 						{#each res as { name, percent, text }}
 							{#if Math.round(percent) >= 5}
-								<tr class="border-b-2 border-gray-200">
+								<tr class="border-b-2 border-black">
 									<td class="px-16 py-2 flex flex-row items-center">
 										<span class="text-center ml-2 font-semibold">{name}</span>
 									</td>
