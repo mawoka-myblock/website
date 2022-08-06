@@ -20,7 +20,7 @@
 		<!-- Open menu -->
 		<button class="lg:hidden" on:click={toggleMenu} class:hidden={!openMenu}>
 			<svg
-			class="text-black"
+				class="text-black"
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
 				height="24"
@@ -38,7 +38,7 @@
 		<!-- Close menu -->
 		<button class="hidden" class:hidden={openMenu} on:click={toggleMenu}>
 			<svg
-			class="text-black"
+				class="text-black"
 				xmlns="http://www.w3.org/2000/svg"
 				width="14"
 				height="14"
@@ -56,10 +56,7 @@
 	</section>
 
 	<!-- Our list of items -->
-	<ul
-		class="lg:flex w-full flex-col lg:flex-row lg:pl-6"
-		class:hidden={openMenu}
-	>
+	<ul class="lg:flex w-full flex-col lg:flex-row lg:pl-6" class:hidden={openMenu}>
 		<li class="py-2">
 			<a
 				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover"
@@ -88,6 +85,12 @@
 			<a
 				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover"
 				href="/blog">Blog</a
+			>
+		</li>
+		<li class="py-2">
+			<a
+				class="text-lg font-medium lg:px-4 text-gray-600 hover:text-green-600 link-hover"
+				href="/blog/search">Search</a
 			>
 		</li>
 	</ul>

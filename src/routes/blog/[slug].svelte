@@ -90,18 +90,18 @@
 	<meta name="twitter:creator" content="@mawoka_" />
 </svelte:head>
 
-<h1 class="text-center text-8xl marck-script">{post.metadata.title}</h1>
-<span class="p-2"
-	><p
-		class="text-center"
+<h1 class="text-center text-8xl marck-script pt-14">{post.metadata.title}</h1>
+<div class="flex justify-center">
+	<span
+		class="p-2"
 		use:tippy={{
 			content: `In UNIX-Time (Seconds)
 	: ${dt.toFormat('X')}`
 		}}
 	>
 		{dt.toFormat('dd LLLL yyyy')}
-	</p></span
->
+	</span>
+</div>
 <div class="flex justify-center">
 	{#each post.metadata.tags as tag}
 		<a
@@ -112,7 +112,7 @@
 	{/each}
 </div>
 <article
-	class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-10 prose-pink text-yellow-50 px-4"
+	class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-10 prose-slate px-4 dark:prose-invert"
 >
 	{@html post.content}
 </article>

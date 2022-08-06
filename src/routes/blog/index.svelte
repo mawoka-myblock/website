@@ -11,7 +11,7 @@
 </script>
 
 <script>
-	import PostList from '../../lib/PostList.svelte';
+	import PostList from '$lib/PostList.svelte';
 
 	export let posts;
 </script>

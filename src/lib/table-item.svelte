@@ -17,15 +17,15 @@
 	sortarr();
 </script>
 
-<table class="max-w-5xl mx-auto table-auto border-2 border-gray-200">
+<table class="max-w-5xl mx-auto table-auto border-2 border-black">
 	<thead class="justify-between">
 		<tr>
 			<th class="px-16 py-2"
-				><span class="text-gray-100 font-semibold"> Technology</span>
+				><span class="text-gray-900 font-semibold"> Technology</span>
 			</th>
 			<th on:click={sortarr} class="px-16 py-2"
-				><span class="text-gray-100 font-semibold">Level</span>
-				{#if sortdir == 'descending'}
+				><span class="text-gray-900 font-semibold">Level</span>
+				{#if sortdir === 'descending'}
 					<svg
 						width="24"
 						height="24"
@@ -111,7 +111,7 @@
 	</thead>
 	<tbody>
 		{#each data as { tech, link, level }}
-			<tr class="border-b-2 border-gray-200">
+			<tr class="border-b-2 border-black">
 				{#if link == ''}
 					{#if level == 1}
 						<td class="px-16 py-2 flex flex-row items-center"

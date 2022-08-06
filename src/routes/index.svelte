@@ -20,11 +20,13 @@
 	<section>
 		<div class="container lg:px-96 px-8">
 			<p class="flow-text">
-				I am a passionate web-developer and the author of my own <a href="/blog" class="a-link"
-					>blog</a
+				I am a passionate web-developer and the author of my own <a
+					href="/blog"
+					class="a-link">blog</a
 				>
-				and my biggest project, <a href="https://classquiz.de" class="a-link">ClassQuiz</a>, an open-source
-				Kahoot!-alternative. Since these aren't my only projects, I got a <a href="/projects" class="a-link">list of them</a>.
+				and my biggest project, <a href="https://classquiz.de" class="a-link">ClassQuiz</a>,
+				an open-source Kahoot!-alternative. Since these aren't my only projects, I got a
+				<a href="/projects" class="a-link">list of them</a>.
 			</p>
 		</div>
 	</section>
