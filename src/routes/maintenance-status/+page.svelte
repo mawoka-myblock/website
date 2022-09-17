@@ -1,5 +1,5 @@
 <script lang="ts">
-	import MaintenanceStatusLists from './maintenance-status-lists.svelte';
+	import MaintenanceStatusLists from '$lib/maintenance-status-lists.svelte';
 	import json_data from './status.json';
 
 	const maintain_statuses_ids = Object.entries(json_data);

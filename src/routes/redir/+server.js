@@ -1,3 +1,5 @@
+import { json } from '@sveltejs/kit';
+
 /**
  * @type {import('@sveltejs/kit').RequestHandler}
  */
@@ -8,17 +10,13 @@ export async function GET({ url }) {
 	};
 
 	if (links[url.searchParams.get('token')] == undefined) {
-		return {
-			status: 404,
-			body: 'WRONG TOKEN YOU IDIOT!'
-		};
+		return new Response('WRONG TOKEN YOU IDIOT!', { status: 404 });
 	} else {
-		return {
+		return json({}, {
+			status: 307,
 			headers: {
 				location: links[url.searchParams.get('token')]
-			},
-			body: {},
-			status: 307
-		};
+			}
+		});
 	}
 }

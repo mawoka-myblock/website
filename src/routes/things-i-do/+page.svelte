@@ -1,19 +1,5 @@
-<script context="module">
-	export async function load({ fetch }) {
-		const response = await fetch('https://late-rice-4828.mawoka.workers.dev');
-		let res = await response.json();
-
-		res = res['data']['languages'];
-		return {
-			props: {
-				res
-			}
-		};
-	}
-</script>
-
 <script>
-	import TableItem from '../lib/table-item.svelte';
+	import TableItem from '$lib/table-item.svelte';
 
 	const skills = [
 		{ tech: 'FastAPI', link: 'https://fastapi.tiangolo.com', level: 5 },
@@ -25,7 +11,8 @@
 		{ tech: 'Linux', link: '', level: 3 }
 		// { tech: 'Java', link: '', level: 1 }
 	];
-	export let res = [];
+	export let data
+	let res = data.res;
 </script>
 
 <svelte:head>
