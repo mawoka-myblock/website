@@ -12,7 +12,7 @@
 				>{#each post.tags as tag}
 					<a
 						href="/blog/tag/{tag}"
-						class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+						class="inline-block bg-[#B07156] rounded-full px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2"
 						>#{tag}</a
 					>{/each}
 			</span>

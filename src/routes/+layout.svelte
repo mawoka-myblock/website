@@ -1,8 +1,8 @@
 <script>
 	import '../app.css';
 	import '@fontsource/marck-script/index.css';
-	// import "bulma/css/bulma.css"
 	import Navbar from '../lib/navbar.svelte';
+	import { browser } from '$app/environment';
 	import NProgress from 'nprogress';
 	import { navigating } from '$app/stores';
 	import 'nprogress/nprogress.css';
@@ -24,6 +24,28 @@
 			NProgress.done();
 		}
 	}
+
+	if (browser) {
+		// pathname.set(window.location.pathname);
+		if (
+			localStorage.theme === 'dark' ||
+			(!('theme' in localStorage) &&
+				window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+
+		// Whenever the user explicitly chooses light mode
+		// 		localStorage.theme = 'light';
+		//
+		// // Whenever the user explicitly chooses dark mode
+		// 		localStorage.theme = 'dark';
+		//
+		// // Whenever the user explicitly chooses to respect the OS preference
+		// 		localStorage.removeItem('theme');
+	}
 </script>
 
 <svelte:head>
@@ -39,10 +61,10 @@
 	.marck-script {
 		font-family: 'Marck Script';
 	}
-	:global(body) {
+	:global(html:not(.dark)) {
 		// height: 100%;
 		// width: 100%;
-		background: linear-gradient(to right, #009444, #39b54a, #8dc63f) repeat-y;
+		background-color: #d6edc9;
 		background-size: cover;
 		/*background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
 		/*background: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%); */
@@ -51,6 +73,13 @@
 		// background-size: 400% 400%;
 
 		//animation: background_animation 5s ease infinite;
+	}
+
+	:global(html.dark) {
+		//background-color: #0f2702;
+		background-color: #4e6e58;
+		background-size: cover;
+		color: white;
 	}
 
 	@keyframes background_animation {

@@ -1,6 +1,6 @@
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
@@ -11,7 +11,7 @@ const config = {
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
-						color: '#000',
+						// color: '#000',
 						/*color: theme('colors.yellow.50'),
 						textDecoration: 'none',
 						a: {
