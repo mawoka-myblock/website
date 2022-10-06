@@ -13,7 +13,7 @@
 			url.delete('q');
 		} else {
 			const res = await fetch(
-				`https://pbe.mawoka.eu/api/v1/public/search?query=${search_query}`
+				`https://pbe.mawoka.eu/api/v1/public/search?query="${search_query}"`
 			);
 			search_results = await res.json();
 			url.set('q', search_query);

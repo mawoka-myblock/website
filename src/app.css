@@ -12,9 +12,7 @@
 	transition: all 0.3s;
 }
 .link-hover:hover {
-	background: linear-gradient(90deg, #009444, #39b54a, #8dc63f);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #4e6e58;
 }
 
 @layer components {
@@ -22,9 +20,9 @@
 		@apply bg-slate-800;
 	}
 	.a-link {
-		@apply bg-gradient-to-t bg-opacity-60 from-orange-600 via-transparent to-transparent
+		@apply bg-gradient-to-t bg-opacity-60 from-[#B07156] via-transparent to-transparent
 		px-1 rounded-b-md
 		transition-all duration-300
-		hover:bg-orange-600 hover:rounded-md;
+		hover:bg-[#B07156] hover:rounded-md;
 	}
 }

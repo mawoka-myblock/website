@@ -21,10 +21,10 @@
 	<thead class="justify-between">
 		<tr>
 			<th class="px-16 py-2"
-				><span class="text-gray-900 font-semibold"> Technology</span>
+				><span class="text-gray-900 dark:text-gray-100 font-semibold"> Technology</span>
 			</th>
 			<th on:click={sortarr} class="px-16 py-2"
-				><span class="text-gray-900 font-semibold">Level</span>
+				><span class="text-gray-900 dark:text-gray-100 font-semibold">Level</span>
 				{#if sortdir === 'descending'}
 					<svg
 						width="24"

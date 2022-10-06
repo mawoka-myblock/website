@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html prefix="og: https://ogp.me/ns#">
-	<html lang="en">
-		<head>
-			<meta charset="utf-8" />
-			<link rel="icon" href="/favicon.png" />
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			<script
-				async
-				defer
-				data-domain="mawoka.eu"
-				src="https://sugar.mawoka.eu.org/js/plausible.hash.outbound-links.js"
-			></script>
-			<a class="h-card" rel="me" href="https://mawoka.eu/" style="visibility: hidden"
-				>Mawoka</a
-			>
-			<link href="mailto:mawoka-myblock@e.email" rel="me" />
-			<link href="https://twitter.com/Mawoka_" rel="me" />
-			<link rel="webmention" href="https://webmention.io/mawoka.eu/webmention" />
-			<link rel="pingback" href="https://webmention.io/mawoka.eu/xmlrpc" />
-			<link rel="me" href="https://mastodon.online/@Mawoka" />
-			<script>
-				window.plausible =
-					window.plausible ||
-					function () {
-						(window.plausible.q = window.plausible.q || []).push(arguments);
-					};
-			</script>
-			%sveltekit.head%
-		</head>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script
+            async
+            defer
+            data-domain="mawoka.eu"
+            src="https://sugar.mawoka.eu.org/js/plausible.hash.outbound-links.js"
+    ></script>
+    <a class="h-card" rel="me" href="https://mawoka.eu/" style="visibility: hidden"
+    >Mawoka</a
+    >
+    <link href="mailto:mawoka-myblock@e.email" rel="me"/>
+    <link href="https://twitter.com/Mawoka_" rel="me"/>
+    <link rel="webmention" href="https://webmention.io/mawoka.eu/webmention"/>
+    <link rel="pingback" href="https://webmention.io/mawoka.eu/xmlrpc"/>
+    <link rel="me" href="https://mastodon.online/@Mawoka"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%sveltekit.assets%/favicon-16x16.png">
+    <link rel="manifest" href="%sveltekit.assets%/site.webmanifest">
+    <script>
+        window.plausible =
+            window.plausible ||
+            function () {
+                (window.plausible.q = window.plausible.q || []).push(arguments);
+            };
+    </script>
+    %sveltekit.head%
+</head>
 
-		<body>
-			<div id="svelte">%sveltekit.body%</div>
-		</body>
-	</html>
+<body>
+<div id="svelte">%sveltekit.body%</div>
+</body>
+</html>
 </html>

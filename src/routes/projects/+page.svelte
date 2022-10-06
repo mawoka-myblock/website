@@ -20,9 +20,9 @@
 			name: 'ClassQuiz',
 			github: 'https://github.com/mawoka-myblock/ClassQuiz',
 			website: 'https://classquiz.mawoka.eu?utm_source=projects&utm_medium=website',
-			tags: ['KAHOOT!', 'svelte', 'ormar', 'fastapi', 'tailwindcss', 'postgres'],
+			tags: ['Kahoot!', 'svelte', 'ormar', 'fastapi', 'tailwindcss', 'postgres'],
 			description:
-				'A quiz-app, like KAHOOT!. Create quizzes and play in real-time against your friends or in class!'
+				'A quiz-app, like Kahoot!. Create quizzes and play in real-time against your friends or in class!'
 		},
 		{
 			name: 'Envwoman',
@@ -95,17 +95,17 @@
 	<section class="section p-12">
 		{#each projects as { name, github, website, tags, description }}
 			<div class="flex justify-center mx-3">
-				<div class="w-full rounded overflow-hidden shadow-lg bg-white my-8">
+				<div class="w-full rounded overflow-hidden shadow-lg bg-white dark:bg-gray-700 my-8">
 					<div class="px-6 py-4">
-						<div class="font-bold text-xl mb-2 text-black">{name}</div>
-						<p class="text-gray-700 text-base">
+						<div class="font-bold text-xl mb-2 text-black dark:text-white">{name}</div>
+						<p class="text-gray-700 dark:text-gray-100 text-base">
 							{description}
 						</p>
 					</div>
 					<div class="px-6 pt-4 pb-2">
 						{#each tags as tag}
 							<span
-								class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+								class="inline-block bg-[#B07156] rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2"
 								>#{tag}</span
 							>
 						{/each}
@@ -122,11 +122,11 @@
 					<div class="items-stretch bg-transparent flex border-t">
 						{#if github != ''}
 							<div class="flex w-0 flex-grow justify-center p-3">
-								<a href={github} class="text-black link-hover">GitHub</a>
+								<a href={github} class="text-black dark:text-gray-100 hover:dark:text-[#d6edc9] hover:text-[#4e6e58] transition">GitHub</a>
 							</div>
 							{#if website != ''}
 								<div class="flex w-0 flex-grow justify-center p-3">
-									<a href={website} class="text-black link-hover">Website</a>
+									<a href={website} class="text-black dark:text-gray-100 hover:dark:text-[#d6edc9] hover:text-[#4e6e58] transition">Website</a>
 								</div>
 							{/if}
 						{/if}

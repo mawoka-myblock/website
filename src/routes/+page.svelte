@@ -12,7 +12,7 @@
 <main>
 	<section class="section">
 		<div class="container pt-12 text-center">
-			<h1 class="" style="color:beige;font-size: 500%;">
+			<h1 class="" style="font-size: 500%;">
 				Hello, I'm <span class="marck-script">Mawoka</span>. <span class="hand">👋</span>
 			</h1>
 		</div>

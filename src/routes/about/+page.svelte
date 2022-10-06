@@ -9,7 +9,7 @@
 			<p class="text-xl mt-4">Here you can learn something about me!</p>
 		</div>
 	</section>
-	<article class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-10 prose-zinc px-4">
+	<article class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-10 prose-zinc px-4 dark:prose-invert">
 		<h2>Who I am</h2>
 		<p>
 			I am Marlon, (online known as <i>Mawoka</i>) and I love programming/coding. I am a
