@@ -102,7 +102,7 @@
 	<div class="grid grid-cols-2 gap-2 group">
 		<Hoverable bind:hovering={FeedBackButtonsHovered.like}>
 			<button
-				class="bg-green-500 rounded-full h-12 w-12"
+				class="bg-green-500 rounded-full h-12 w-12 transition"
 				class:opacity-40={FeedBackButtonsHovered.dislike}
 				on:click={() => submitFeedback(true).then()}
 			>
@@ -125,7 +125,7 @@
 		</Hoverable>
 		<Hoverable bind:hovering={FeedBackButtonsHovered.dislike}>
 			<button
-				class="rounded-full bg-red-500 h-12 w-12"
+				class="rounded-full bg-red-500 h-12 w-12 transition"
 				class:opacity-40={FeedBackButtonsHovered.like}
 				on:click={() => submitFeedback(false).then()}
 			>
