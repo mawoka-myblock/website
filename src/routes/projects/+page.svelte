@@ -1,6 +1,24 @@
 <script>
 	const projects = [
 		{
+			name: 'ClassQuiz',
+			github: 'https://github.com/mawoka-myblock/ClassQuiz',
+			website: 'https://classquiz.de?utm_source=projects&utm_medium=website',
+			tags: ['Kahoot!', 'svelte', 'ormar', 'fastapi', 'tailwindcss', 'postgres'],
+			description:
+				'A quiz-app, like Kahoot!. Create quizzes and play in real-time against your friends or in class!'
+		},
+		{
+			name: "APsystems EZ1 Home Assistant Local API",
+			github: "https://github.com/SonnenladenGmbH/APsystems-EZ1-API-HomeAssistant",
+			tags: ["python", "homeassistant"]
+		},
+		{
+			name: "APsystems EZ1 Home Assistant Cloud API",
+			github: "https://github.com/mawoka-myblock/apsystemsapi-ha",
+			tags: ["python", "homeassistant", "reverse-engineering"]
+		},
+		{
 			name: 'SimpleSelfhostAuth',
 			github: 'https://github.com/mawoka-myblock/SimpleSelfhostAuth',
 			tags: ['rust', 'actix', 'actix', 'auth', 'svelte', 'tailwind', 'nginx'],
@@ -15,14 +33,6 @@
 			website: '',
 			description:
 				'PersonalBlogEngine is a markdown-based headless CMS for your own personal blog.'
-		},
-		{
-			name: 'ClassQuiz',
-			github: 'https://github.com/mawoka-myblock/ClassQuiz',
-			website: 'https://classquiz.mawoka.eu?utm_source=projects&utm_medium=website',
-			tags: ['Kahoot!', 'svelte', 'ormar', 'fastapi', 'tailwindcss', 'postgres'],
-			description:
-				'A quiz-app, like Kahoot!. Create quizzes and play in real-time against your friends or in class!'
 		},
 		{
 			name: 'Envwoman',
