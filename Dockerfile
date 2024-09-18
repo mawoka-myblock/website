@@ -1,14 +1,15 @@
 ### Build Step
 # pull the Node.js Docker image
-FROM node:18.5-bullseye as builder
+FROM node:lts-bookworm AS builder
 # change working directory
 WORKDIR /usr/src/app
 # copy the package.json files from local machine to the workdir in container
-COPY package*.json ./
-COPY pnpm-lock.yaml ./
 
 # run npm install in our local machine
-RUN corepack enable && corepack prepare pnpm@7.13.2 --activate && pnpm i
+RUN corepack enable pnpm
+COPY package*.json ./
+COPY pnpm-lock.yaml ./
+RUN pnpm i
 
 # copy the generated modules and all other files to the container
 COPY . .
@@ -18,7 +19,7 @@ RUN pnpm run build
 
 ### Serve Step
 # pull the Node.js Docker image
-FROM node:18.5-bullseye-slim
+FROM node:lts-bookworm-slim
 
 # change working directory
 WORKDIR /app
