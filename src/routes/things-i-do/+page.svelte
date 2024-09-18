@@ -62,14 +62,13 @@
                 </table>
             </div>
         </div>
-        <div class="column mt-8" style="overflow-x: hidden;">
+        <!-- <div class="column mt-8" style="overflow-x: hidden;">
             <h3 class="text-3xl text-center">Stuff I'm familiar with</h3>
             <h5 class="text-xl text-center">Child -> Junior -> Teenager -> Adult -> Senior</h5>
-            <!--        1          2          3         4          5 -->
             <div class="center mt-4">
                 <TableItem data={skills}/>
             </div>
-        </div>
+        </div> -->
     </div>
 </main>
 

@@ -9,14 +9,16 @@
 				'A quiz-app, like Kahoot!. Create quizzes and play in real-time against your friends or in class!'
 		},
 		{
-			name: "APsystems EZ1 Home Assistant Local API",
-			github: "https://github.com/SonnenladenGmbH/APsystems-EZ1-API-HomeAssistant",
+			name: "APsystems EZ1 Home Assistant Local API Integration",
+			description: "Integrate your APsystems EZ1 series inverters easily into Home Assistant!",
+			github: "https://www.home-assistant.io/integrations/apsystems",
 			tags: ["python", "homeassistant"]
 		},
 		{
-			name: "APsystems EZ1 Home Assistant Cloud API",
-			github: "https://github.com/mawoka-myblock/apsystemsapi-ha",
-			tags: ["python", "homeassistant", "reverse-engineering"]
+			name: "APsystems EZ1 Python API",
+			description: "Interface with your APsystems EZ1 inverters using Python.",
+			github: "https://github.com/SonnenladenGmbH/APsystems-EZ1-API",
+			tags: ["python", "homeassistant"]
 		},
 		{
 			name: 'SimpleSelfhostAuth',
@@ -63,21 +65,6 @@
 			tags: ['python', 'apprise', 'deta'],
 			description:
 				'A script that can send you a notification via apprise if a rss-feed changes.'
-		},
-		{
-			name: 'Dienste-App',
-			github: '',
-			website: '',
-			tags: ['javascript', 'svelte', 'framework7', 'mongodb', 'fastapi', 'web'],
-			description:
-				'An app for a class to manage services in class like cleaning the board or mopping.'
-		},
-		{
-			name: 'Vocab-Server',
-			github: '',
-			website: '',
-			tags: ['pywebio', 'fastapi', 'mongodb'],
-			description: 'A program to learn vocab. This is also my first project ever.'
 		},
 		{
 			name: 'uptime-kuma-static',

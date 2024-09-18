@@ -1,0 +1,163 @@
+<script lang="ts">
+	import medusa, { MEDUSA_BACKEND_URL, MEDUSA_PUBLISHABLE_API_KEY } from '$lib/medusa';
+	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+	import JSConfetti from 'js-confetti';
+
+	export let data: PageData;
+	let product = data.product;
+
+	console.log(product);
+	let selectedOptions = {};
+	let variant = undefined;
+	let variant_id = undefined;
+	let jsConfetti = undefined;
+
+	let cart_status: 'idle' | 'loading' | 'finished' = 'idle';
+
+	const find_variant = () => {
+		variant_id = product.variants.find((variant) =>
+			variant.options?.every(
+				(optionValue) => optionValue.value === selectedOptions[optionValue.option_id!]
+			)
+		).id;
+		load_varaint();
+	};
+
+	const load_varaint = () => {
+		variant = product.variants.find((v) => v.id === variant_id);
+		console.log(variant);
+	};
+
+	const get_region = async () => {
+		return (await medusa.regions.retrieve(data.region_id)).region;
+	};
+
+	const add_to_cart = async () => {
+		cart_status = "loading"
+		await medusa.carts.lineItems.create(data.cart_id, {variant_id: variant.id, quantity: 1})
+		cart_status = "finished"
+		jsConfetti.addConfetti();
+		setTimeout(() => {cart_status = "idle"}, 1000)
+	};
+	onMount(() => {
+		find_variant();
+		jsConfetti = new JSConfetti();
+	});
+</script>
+
+<div>
+	<h1>{product.title}</h1>
+</div>
+
+<div class="grid grid-cols-2">
+	<div>
+		<img src={product.images[0].url} />
+	</div>
+
+	<div>
+		{#if product.description}
+			<div class="flex flex-col gap-4 m-4 bg-black/30 rounded p-2">
+				<p>{product.description}</p>
+			</div>
+		{/if}
+		<div class="flex flex-col gap-4 m-4 bg-black/30 rounded p-2">
+			{#each product.options as option, i}
+				<div class="w-full flex flex-col">
+					<p>{option.title}</p>
+					<select
+						class="p-2 dark:bg-gray-700 rounded-lg"
+						bind:value={selectedOptions[option.id]}
+						on:change={find_variant}
+					>
+						{#each option.values as val}
+							<option value={val.value}>{val.value}</option>
+						{/each}
+					</select>
+				</div>
+			{/each}
+		</div>
+		{#if variant?.calculated_price}
+			<div class="flex flex-col gap-4 m-4 bg-black/30 rounded p-2">
+				{#await get_region()}
+					Loading...
+				{:then region}
+					<p class="text-center text-2xl">
+						{new Intl.NumberFormat(undefined, {
+							style: 'currency',
+							currency: region.currency_code
+						}).format(variant.calculated_price.calculated_amount)}
+					</p>
+					<p>Currently in stock: {variant.inventory_quantity}</p>
+					<p class="block">
+						{#if variant.allow_backorder}
+							<svg
+								class="h-8 w-8 inline-block"
+								data-slot="icon"
+								aria-hidden="true"
+								fill="none"
+								stroke-width="1.5"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg> Backorders available
+						{:else}
+							<svg
+								class="h-8 w-8 inline-block"
+								data-slot="icon"
+								aria-hidden="true"
+								fill="none"
+								stroke-width="1.5"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg> Backorders unavailable
+						{/if}
+					</p>
+				{/await}
+			</div>
+			<div class="flex flex-col gap-4 m-4 bg-black/30 rounded p-2">
+				<button
+					class="bg-[#B07156] rounded p-4 flex justify-center hover:bg-opacity-80 transition duration-200 outline-none"
+					on:click={add_to_cart}
+					disabled={cart_status !== 'idle'}
+				>
+					{#if cart_status === 'idle'}
+						<svg
+							class="h-8 w-8 inline-block"
+							data-slot="icon"
+							aria-hidden="true"
+							fill="none"
+							stroke-width="1.5"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+						</svg><span class="my-auto">Add to cart!</span>
+					{:else if cart_status === 'loading'}
+						Loading...
+					{:else}
+						Success!
+					{/if}
+				</button>
+			</div>
+		{/if}
+	</div>
+</div>
