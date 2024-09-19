@@ -17,21 +17,9 @@ export const load = async ({ cookies, fetch, url }) => {
 		error(res.status);
 	}
 	const json = await res.json();
-	const res2 = await fetch(`${MEDUSA_BACKEND_URL}/store/carts/${shopping_cart_id}`, {
-		credentials: 'include',
-		headers: MEDUSA_BASE_HEADER
-	});
-	if (!res2.ok) {
-		console.log(await res2.text());
-		error(res2.status);
-	}
-	const json2 = await res2.json();
-	const cart: CartDTO = json2.cart;
-
 	const shipping_options: ShippingOptionDTO[] = json.shipping_options;
 	return {
 		shipping_options,
-		cart
 	};
 };
 

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { enhance } from '$app/forms';
 	export let data: PageData;
 
 	const format_money = (money: number): string => {
@@ -14,17 +15,17 @@
 </script>
 
 <div class="min-h-screen flex items-center justify-center">
-	<div class="max-w-lg w-full bg-white p-8 border border-gray-200 rounded-lg shadow-lg">
+	<div class="max-w-lg w-full bg-white p-8 border border-gray-200 rounded-lg shadow-lg dark:bg-gray-700 dark:border-none">
 		<!-- Title -->
-		<h1 class="text-2xl font-bold mb-6 text-gray-800 text-center">Choose Shipping Method</h1>
+		<h1 class="text-2xl font-bold mb-6 text-gray-800 text-center dark:text-white">Choose Shipping Method</h1>
 
 		<!-- Shipping Methods Form -->
-		<form action="#" method="POST">
+		<form method="POST" use:enhance>
 			<!-- Standard Shipping Option -->
 			{#each data.shipping_options as option}
 				<div class="mb-4" class:opacity-60={!option.provider.is_enabled}>
 					<label
-						class="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-100 transition-all"
+						class="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer hover:bg-gray-100 transition-all dark:bg-gray-900 dark:border-none"
 					>
 						<input
 							disabled={!option.provider.is_enabled}
@@ -35,8 +36,8 @@
 							on:click={() => {selected_shipping_cost = option.amount; shipping_tax_included = option.is_tax_inclusive}}
 						/>
 						<div class="ml-4">
-							<span class="font-medium text-gray-800">{option.name}</span>
-							<p class="text-sm text-gray-500">{option.type.description}</p>
+							<span class="font-medium text-gray-800 dark:text-white">{option.name}</span>
+							<p class="text-sm text-gray-500 dark:text-gray-300">{option.type.description}</p>
 						</div>
 						<span class="ml-auto font-semibold text-gray-900"
 							>{format_money(option.amount)}</span
@@ -55,9 +56,10 @@
 			<!-- Continue Button -->
 			<button
 				type="submit"
-				class="w-full py-3 mt-6 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out"
+				disabled={!selected_shipping_cost}
+				class="w-full py-3 mt-6 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out disabled:opacity-60"
 			>
-				Continue to Payment
+				Continue to Payment Selection
 			</button>
 		</form>
 	</div>

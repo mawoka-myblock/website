@@ -1,5 +1,5 @@
 import { MEDUSA_BACKEND_URL, MEDUSA_BASE_HEADER } from '$lib/medusa.js';
-import { error, fail } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import type { CartDTO } from '@medusajs/types';
 
 export const load = async ({ cookies, fetch, url }) => {

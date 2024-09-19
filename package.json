@@ -12,7 +12,9 @@
 	"devDependencies": {
 		"@csstools/postcss-sass": "^5.1.1",
 		"@fontsource/marck-script": "^5.1.0",
+		"@medusajs/medusa-js": "6.1.9-preview-20240505115807",
 		"@medusajs/types": "^1.11.17",
+		"@stripe/stripe-js": "^4.5.0",
 		"@sveltejs/adapter-auto": "^3.2.4",
 		"@sveltejs/adapter-node": "^5.2.2",
 		"@sveltejs/kit": "^2.5.27",
@@ -38,13 +40,11 @@
 		"sass": "^1.78.0",
 		"svelte": "^4.2.19",
 		"svelte-preprocess": "^6.0.2",
+		"svelte-stripe": "^1.2.0",
 		"sveltejs-tippy": "^3.0.0",
 		"tailwindcss": "^3.4.11",
 		"typescript": "^5.6.2",
-		"@medusajs/medusa-js": "6.1.9-preview-20240505115807",
 		"vite": "^5.4.6"
 	},
-	"type": "module",
-	"dependencies": {
-	}
+	"type": "module"
 }

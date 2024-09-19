@@ -20,6 +20,9 @@ importers:
       '@medusajs/types':
         specifier: ^1.11.17
         version: 1.11.17
+      '@stripe/stripe-js':
+        specifier: ^4.5.0
+        version: 4.5.0
       '@sveltejs/adapter-auto':
         specifier: ^3.2.4
         version: 3.2.4(@sveltejs/kit@2.5.27(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.6(@types/node@22.5.5)(sass@1.78.0)))(svelte@4.2.19)(vite@5.4.6(@types/node@22.5.5)(sass@1.78.0)))
@@ -95,6 +98,9 @@ importers:
       svelte-preprocess:
         specifier: ^6.0.2
         version: 6.0.2(postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.47)(yaml@2.5.1))(postcss@8.4.47)(sass@1.78.0)(svelte@4.2.19)(typescript@5.6.2)
+      svelte-stripe:
+        specifier: ^1.2.0
+        version: 1.2.0(@stripe/stripe-js@4.5.0)(svelte@4.2.19)
       sveltejs-tippy:
         specifier: ^3.0.0
         version: 3.0.0
@@ -896,6 +902,10 @@ packages:
 
   '@sqltools/formatter@1.2.5':
     resolution: {integrity: sha512-Uy0+khmZqUrUGm5dmMqVlnvufZRSK0FbYzVgp0UMstm+F5+W2/jnEEQyc9vo1ZR/E5ZI/B1WjjoTqBqwJL6Krw==}
+
+  '@stripe/stripe-js@4.5.0':
+    resolution: {integrity: sha512-dMOzc58AOlsF20nYM/avzV8RFhO/vgYTY7ajLMH6mjlnZysnOHZxsECQvjEmL8Q/ukPwHkOnxSPW/QGCCnp7XA==}
+    engines: {node: '>=12.16'}
 
   '@sveltejs/adapter-auto@3.2.4':
     resolution: {integrity: sha512-a64AKYbfTUrVwU0xslzv1Jf3M8bj0IwhptaXmhgIkjXspBXhD0od9JiItQHchijpLMGdEDcYBlvqySkEawv6mQ==}
@@ -3508,6 +3518,12 @@ packages:
       typescript:
         optional: true
 
+  svelte-stripe@1.2.0:
+    resolution: {integrity: sha512-k2cBOceZLfstjlnZNoGv2eSvrhJ7piha8zRvSFD8g/n0f669j5wS7Ba5xInVTtgKMU2QdNpj5niYR00bqdxbKw==}
+    peerDependencies:
+      '@stripe/stripe-js': ^3
+      svelte: ^3 || ^4
+
   svelte@4.2.19:
     resolution: {integrity: sha512-IY1rnGr6izd10B0A8LqsBfmlT5OILVuZ7XsI0vdGPEvuonFV7NYEUK4dAkm9Zg2q0Um92kYjTpS1CAP3Nh/KWw==}
     engines: {node: '>=16'}
@@ -4853,6 +4869,8 @@ snapshots:
       - '@types/node'
 
   '@sqltools/formatter@1.2.5': {}
+
+  '@stripe/stripe-js@4.5.0': {}
 
   '@sveltejs/adapter-auto@3.2.4(@sveltejs/kit@2.5.27(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.6(@types/node@22.5.5)(sass@1.78.0)))(svelte@4.2.19)(vite@5.4.6(@types/node@22.5.5)(sass@1.78.0)))':
     dependencies:
@@ -7530,6 +7548,11 @@ snapshots:
       postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.47)(yaml@2.5.1)
       sass: 1.78.0
       typescript: 5.6.2
+
+  svelte-stripe@1.2.0(@stripe/stripe-js@4.5.0)(svelte@4.2.19):
+    dependencies:
+      '@stripe/stripe-js': 4.5.0
+      svelte: 4.2.19
 
   svelte@4.2.19:
     dependencies:

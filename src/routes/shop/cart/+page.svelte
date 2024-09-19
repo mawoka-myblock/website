@@ -83,6 +83,7 @@
             confirm('Error setting email!');
 			window.location.reload();
         }
+		window.location.assign("/shop/cart/address")
         status = 'idle';
 	};
 </script>
@@ -92,8 +93,8 @@
 </div>
 
 <section class="lg:grid grid-cols-3 p-4 gap-4">
-	<table class="min-w-full bg-white/80 border border-gray-200 rounded-lg col-span-2">
-		<thead class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
+	<table class="min-w-full bg-white/80 border border-gray-200 rounded-lg col-span-2 dark:bg-gray-700 dark:border-gray-500">
+		<thead class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal dark:bg-gray-900 dark:text-white">
 			<tr>
 				<th class="py-3 px-6 text-left">Item</th>
 				<th class="py-3 px-6 text-left">Quantity</th>
@@ -102,7 +103,7 @@
 		</thead>
 		<tbody class="text-gray-600 text-sm font-light">
 			{#each cart.items as item}
-				<tr class="border-b border-gray-200 hover:bg-gray-100 transition">
+				<tr class="border-b border-gray-200 hover:bg-gray-100 transition dark:text-gray-100 hover:dark:bg-gray-800 dark:border-gray-500">
 					<!-- Item Column: Includes Image, Title, and Variant -->
 					<td class="py-3 px-6 text-left whitespace-nowrap flex items-center space-x-4">
 						<img
@@ -112,7 +113,7 @@
 						/>
 						<div>
 							<div class="font-medium">{item.product_title}</div>
-							<div class="text-sm text-gray-500">{item.variant_title}</div>
+							<div class="text-sm text-gray-500 dark:text-gray-200">{item.variant_title}</div>
 						</div>
 					</td>
 
@@ -121,7 +122,7 @@
 						<div class="flex items-center space-x-2">
 							<!-- Decrease quantity button -->
 							<button
-								class="text-gray-500 hover:text-gray-700 focus:outline-none"
+								class="text-gray-500 hover:text-gray-700 focus:outline-none transition-all dark:text-gray-200 dark:hover:text-white"
 								disabled={item.quantity < 2}
 								on:click={() => quantity_modify(item.id, item.quantity - 1)}
 							>
@@ -148,7 +149,7 @@
 
 							<!-- Increase quantity button -->
 							<button
-								class="text-gray-500 hover:text-gray-700 focus:outline-none"
+								class="text-gray-500 hover:text-gray-700 focus:outline-none transition-all dark:text-gray-200 dark:hover:text-white"
 								on:click={() => quantity_modify(item.id, item.quantity + 1)}
 							>
 								<svg
@@ -200,7 +201,7 @@
 					>
 				</tr>
 			{/each}
-			<tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal font-semibold">
+			<tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal font-semibold dark:bg-gray-900 dark:text-white dark:border-gray-500">
 				<td class="py-3 px-6 text-left"></td>
 				<td class="py-3 px-6 text-left"></td>
 				<td class="py-3 px-6 text-left">{format_money(cart.total)}</td>
@@ -210,13 +211,13 @@
 	<div>
 		<form on:submit|preventDefault={submit_checkout_form}>
 			<!-- Email Input -->
-			<label for="email" class="block text-sm font-medium text-gray-700 mb-2"
+			<label for="email" class="block text-sm font-medium text-gray-700 dark:text-white mb-2"
 				>Email Address</label
 			>
 			<input
 				type="email"
 				id="email"
-				class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+				class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:border-none"
 				placeholder="you@nextgen.makers"
 				bind:value={checkout_email}
 				required
@@ -233,10 +234,10 @@
 		</form>
 
 		<!-- Shipping and Total Overview Section -->
-		<div class="mt-8 bg-gray-50 p-4 rounded-lg">
+		<div class="mt-8 bg-gray-50 p-4 rounded-lg dark:bg-gray-800">
 			<div class="flex justify-between items-center mb-2">
-				<span class="text-gray-600">Shipping Costs:</span>
-				<span class="font-medium text-gray-900"
+				<span class="text-gray-600 dark:text-white">Shipping Costs:</span>
+				<span class="font-medium text-gray-900 dark:text-white"
 					>{#if cart.shipping_total == 0}
 						<i>To be calculated</i>
 					{:else}
@@ -245,8 +246,8 @@
 				</span>
 			</div>
 			<div class="flex justify-between items-center">
-				<span class="text-gray-600">Total Costs:</span>
-				<span class="font-semibold text-gray-900"
+				<span class="text-gray-600 dark:text-white">Total Costs:</span>
+				<span class="font-semibold text-gray-900 dark:text-white"
 					>{format_money(cart.total)}
 					{#if cart.shipping_total == 0}<i>+ shipping</i>{/if}</span
 				>
