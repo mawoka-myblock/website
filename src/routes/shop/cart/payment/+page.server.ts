@@ -45,7 +45,6 @@ export const load = async ({ fetch, parent, cookies }) => {
 export const actions = {
 	set_payment_provider: async ({ fetch, request }) => {
 		const formData = await request.formData();
-		console.log(JSON.stringify(formData));
 		const selected_payment_provider = formData.get('payment_provider_id');
 		const payment_collection_id = formData.get('payment_collection_id');
 		if (!selected_payment_provider) {

@@ -25,7 +25,6 @@
 			}
 		});
 	};
-	console.log(data.cart.billing_address);
 </script>
 
 <Elements {stripe}>

@@ -17,7 +17,6 @@ export const load = async ({ fetch, parent, cookies }) => {
 		console.log(await res2.text());
 		error(res2.status);
 	}
-	console.log(res2.status);
 	const json2 = await res2.json();
 	const payment_collection: PaymentCollectionDTO = json2.payment_collection;
     return {

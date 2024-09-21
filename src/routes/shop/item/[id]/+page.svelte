@@ -4,13 +4,15 @@
 	import type { PageData } from './$types';
 	import JSConfetti from 'js-confetti';
 	import { fade, slide } from 'svelte/transition';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
+	import type { ProductVariantDTO } from '@medusajs/types';
 
 	export let data: PageData;
 	let product = data.product;
 
-	console.log(product);
-	let selectedOptions = {};
-	let variant = undefined;
+	let selectedOptions: Record<string, string> = {};
+	let variant: ProductVariantDTO = undefined;
 	let variant_id = undefined;
 	let jsConfetti = undefined;
 	let selected_image = 0;
@@ -18,18 +20,23 @@
 
 	let cart_status: 'idle' | 'loading' | 'finished' = 'idle';
 
-	const find_variant = () => {
+	const find_variant = async () => {
 		variant_id = product.variants.find((variant) =>
 			variant.options?.every(
 				(optionValue) => optionValue.value === selectedOptions[optionValue.option_id!]
 			)
 		).id;
-		load_varaint();
+		load_variant();
+		let base_url = '?';
+		console.log(selectedOptions);
+		for (const [key, value] of Object.entries(selectedOptions)) {
+			base_url += `${key}=${value},`;
+		}
+		await goto(base_url.slice(0, -1));
 	};
 
-	const load_varaint = () => {
+	const load_variant = () => {
 		variant = product.variants.find((v) => v.id === variant_id);
-		console.log(variant);
 	};
 
 	const get_region = async () => {
@@ -71,7 +78,16 @@
 		cart_status;
 	}
 	onMount(() => {
+		const path = $page.url.searchParams.toString();
+		const pairs = decodeURIComponent(path).split(',');
+		// Iterate over each pair and split by '=' to extract keys and values
+		pairs.forEach((pair) => {
+			const [key, value] = pair.split('=');
+			selectedOptions[key] = value;
+		});
+		console.log(selectedOptions)
 		find_variant();
+
 		jsConfetti = new JSConfetti();
 	});
 </script>

@@ -7,7 +7,6 @@
 	let cart = data.cart;
 	let status: 'idle' | 'loading' = 'idle';
 	let checkout_email = '';
-	console.log(cart);
 
 	const remove_from_cart = async (item_id: string) => {
 		status = 'loading';
@@ -93,7 +92,12 @@
 </div>
 
 <section class="lg:grid grid-cols-3 p-4 gap-4">
-	<table class="min-w-full bg-white/80 border border-gray-200 rounded-lg col-span-2 dark:bg-gray-700 dark:border-gray-500">
+	{#if cart.items.length === 0}
+		<div class="flex col-span-2 justify-center items-middle">
+			<p class="text-2xl">Your cart is empty! Go Find some <a href="/shop" class="underline">awesome stuff</a>!</p>
+		</div>
+	{:else}
+	<table class="min-w-full bg-white/80 border border-gray-200 rounded-lg col-span-2 dark:bg-gray-700 dark:border-none shadow-xl">
 		<thead class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal dark:bg-gray-900 dark:text-white">
 			<tr>
 				<th class="py-3 px-6 text-left">Item</th>
@@ -112,7 +116,7 @@
 							class="w-12 h-12 rounded-md"
 						/>
 						<div>
-							<div class="font-medium">{item.product_title}</div>
+							<a href="/shop/item/{item.product_handle}" class="font-medium">{item.product_title}</a>
 							<div class="text-sm text-gray-500 dark:text-gray-200">{item.variant_title}</div>
 						</div>
 					</td>
@@ -208,6 +212,7 @@
 			</tr>
 		</tbody>
 	</table>
+	{/if}
 	<div>
 		<form on:submit|preventDefault={submit_checkout_form}>
 			<!-- Email Input -->

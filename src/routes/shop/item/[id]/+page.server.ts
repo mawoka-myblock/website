@@ -23,7 +23,6 @@ export const load = async ({ params, cookies, fetch, url }) => {
     }
     const json = await req.json()
 	const product: ProductDTO = json.products[0];
-    console.log(json)
 	return {
 		product, region_id
 	};

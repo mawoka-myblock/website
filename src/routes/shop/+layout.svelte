@@ -16,7 +16,6 @@
 		region = region_id;
 		region_selection_open = false
         const params = new URL(window.location.href).searchParams
-        console.log(params.get("return_to"))
 		const cart = await medusa.carts.create({region_id})
 		Cookies.set("shop_cart_id", cart.cart.id)
         if (params.get("return_to")) {
