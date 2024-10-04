@@ -3,6 +3,7 @@
 FROM node:lts-bookworm AS builder
 ENV PUBLIC_MEDUSA_BACKEND_URL=https://medusa.nexus.mawoka.eu
 ENV PUBLIC_MEDUSA_PUBLISHABLE_API_KEY=pk_e0070ce5dc78348b1b76ca622b701a241f597006b2dbde415648982e7189d275
+ENV PUBLIC_STRIPE_KEY=pk_test_xxx
 # change working directory
 WORKDIR /usr/src/app
 # copy the package.json files from local machine to the workdir in container
