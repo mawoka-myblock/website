@@ -47,11 +47,12 @@ export const actions = {
 		const formData = await request.formData();
 		const selected_payment_provider = formData.get('payment_provider_id');
 		const payment_collection_id = formData.get('payment_collection_id');
+		const payment_url = formData.get("payment_url")
 		if (!selected_payment_provider) {
 			return fail(400, { detail: 'Payment Provider ID unset' });
 		}
 		if (!payment_collection_id) return fail(400, { detail: 'Payment Collection ID unset' });
-		if (!selected_payment_provider) return;
+		if (!payment_url) return fail(400, { detail: 'Payment URL unset' });
 		const res = await fetch(
 			`${MEDUSA_BACKEND_URL}/store/payment-collections/${payment_collection_id}/payment-sessions`,
 			{
@@ -64,10 +65,10 @@ export const actions = {
 			}
 		);
 		if (!res.ok) {
+			console.log("herre!")
 			console.log(await res.text());
 			error(res.status);
 		}
-		const payment_provider = pp_id_to_provider(selected_payment_provider);
-		return redirect(307, `/shop/cart/payment/provider/${payment_provider}`);
+		return redirect(307, `/shop/cart/payment/provider/${payment_url}`);
 	}
 };

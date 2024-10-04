@@ -24,9 +24,11 @@ export const actions = {
 		});
 		if (!res.ok) {
 			const d = await res.json();
+			console.log("a")
 			return fail(res.status, d);
 		}
 		const token = (await res.json()).token;
+		console.log(token)
 		const res2 = await fetch(`${MEDUSA_BACKEND_URL}/auth/session`, {
 			credentials: 'include',
 			method: 'POST',
@@ -36,6 +38,7 @@ export const actions = {
 			}
 		});
 		if (!res2.ok) {
+			console.log("b")
 			const d = await res2.json();
 			return fail(res2.status, d);
 		}

@@ -30,9 +30,10 @@
 		let base_url = '?';
 		console.log(selectedOptions);
 		for (const [key, value] of Object.entries(selectedOptions)) {
+			if (!key || !value) continue;
 			base_url += `${key}=${value},`;
 		}
-		await goto(base_url.slice(0, -1));
+		await goto(base_url.slice(0, -1), { replaceState: true });
 	};
 
 	const load_variant = () => {
@@ -85,7 +86,7 @@
 			const [key, value] = pair.split('=');
 			selectedOptions[key] = value;
 		});
-		console.log(selectedOptions)
+		console.log(selectedOptions);
 		find_variant();
 
 		jsConfetti = new JSConfetti();

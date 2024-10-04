@@ -10,18 +10,26 @@
 	let selected_payment_provider = '';
 	let cart = data.cart;
 
-	const payment_provider_details: Record<string, { name: string; description: string }> = {
+	const payment_provider_details: Record<string, { name: string; description: string, url: string }> = {
 		default: {
 			name: 'Manual',
-			description: "Don't choose this!"
+			description: "Don't choose this!",
+			url: "default"
 		},
 		stripe: {
 			name: 'Stripe',
-			description: "Don't choose this!"
+			description: "Pay with Stripe using a credit card",
+			url: "stripe"
+		},
+		stripe_giropay: {
+			name: "Stripe - Giropay",
+			description: "Pay with GiroPay through Stripe",
+			url: "stripe"
 		},
 		not_found: {
 			name: 'Not available',
-			description: "If you see this, don't continue!"
+			description: "If you see this, don't continue!",
+			url: "not_found"
 		}
 	};
 
@@ -42,6 +50,7 @@
 		}
 		cart = (await res.json()).cart;
 	};
+	console.log(data.payment_providers)
 </script>
 
 <div class="min-h-screen flex items-center justify-center">
@@ -81,6 +90,13 @@
 						value={data.payment_collection.id}
 						id="payment_collection_id"
 						name="payment_collection_id"
+						type="hidden"
+						class="hidden invisible"
+					/>
+					<input
+						value={provider.url}
+						id="payment_url"
+						name="payment_url"
 						type="hidden"
 						class="hidden invisible"
 					/>

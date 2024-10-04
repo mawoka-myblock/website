@@ -6,6 +6,7 @@
 	import NProgress from 'nprogress';
 	import { navigating } from '$app/stores';
 	import 'nprogress/nprogress.css';
+	import Footer from '$lib/footer.svelte';
 	const randomTagColor = () => {
 		const colors = ['#009444', '#39b54a', '#8dc63f'];
 		let index = Math.floor(Math.random() * colors.length);
@@ -53,9 +54,10 @@
 </svelte:head>
 
 <Navbar />
-<div class="pt-12">
+<div class="pt-12 min-h-screen">
 	<slot />
 </div>
+<Footer />
 
 <style lang="scss">
 	.marck-script {

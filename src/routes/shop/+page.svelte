@@ -3,7 +3,6 @@
 	import ProductDisplay from '$lib/ProductDisplay.svelte';
 
 	export let data: PageData;
-	console.log(data.products);
 </script>
 
 <section>
