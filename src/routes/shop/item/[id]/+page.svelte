@@ -97,8 +97,8 @@
 	<h1 class="text-6xl">{product.title}</h1>
 </div>
 
-<div class="grid grid-cols-2">
-	<div class="flex justify-center">
+<div class="grid lg:grid-cols-2 grid-cols-1">
+	<div class="flex justify-center mx-4 lg:mx-0">
 		<div class="relative w-fit group">
 			<button
 				class="absolute h-full flex items-center top-0 left-0 opacity-50 group-hover:opacity-100 transition disabled:group-hover:opacity-60 disabled:opacity-30"
@@ -155,7 +155,7 @@
 				<img
 					src={product.images[selected_image].url}
 					transition:slide={{ axis: 'x', duration: 200 }}
-					class="max-h-[80vh] transition-all"
+					class="max-h-[80vh] transition-all rounded-lg shadow-lg"
 					alt="Imagesad"
 				/>
 				<link rel="prefetch" href="next.html" />

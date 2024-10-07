@@ -14,7 +14,7 @@
 			`${MEDUSA_BACKEND_URL}/store/carts/${cart.id}/line-items/${item_id}?fields=+items,+items.thumbnail`,
 			{
 				method: 'DELETE',
-                credentials: "include",
+				credentials: 'include',
 				headers: MEDUSA_BASE_HEADER
 			}
 		);
@@ -40,7 +40,7 @@
 			`${MEDUSA_BACKEND_URL}/store/carts/${cart.id}/line-items/${item_id}?fields=+items,+items.thumbnail`,
 			{
 				method: 'POST',
-                credentials: "include",
+				credentials: 'include',
 				headers: { ...MEDUSA_BASE_HEADER, 'Content-Type': 'application/json' },
 				body: JSON.stringify({
 					quantity
@@ -57,33 +57,33 @@
 	};
 
 	const submit_checkout_form = async () => {
-        if (checkout_email.length < 7) {
-            return
-        }
-        if (cart.items.length < 1) {
-            return
-        }
-        if (status === "loading") {
-            return
-        }
+		if (checkout_email.length < 7) {
+			return;
+		}
+		if (cart.items.length < 1) {
+			return;
+		}
+		if (status === 'loading') {
+			return;
+		}
 		status = 'loading';
 		const res = await fetch(
 			`${MEDUSA_BACKEND_URL}/store/carts/${cart.id}?fields=+items,+items.thumbnail`,
 			{
 				method: 'POST',
-                credentials: "include",
+				credentials: 'include',
 				headers: { ...MEDUSA_BASE_HEADER, 'Content-Type': 'application/json' },
 				body: JSON.stringify({
 					email: checkout_email
 				})
 			}
 		);
-        if (!res.ok) {
-            confirm('Error setting email!');
+		if (!res.ok) {
+			confirm('Error setting email!');
 			window.location.reload();
-        }
-		window.location.assign("/shop/cart/address")
-        status = 'idle';
+		}
+		window.location.assign('/shop/cart/address');
+		status = 'idle';
 	};
 </script>
 
@@ -94,124 +94,143 @@
 <section class="lg:grid grid-cols-3 p-4 gap-4">
 	{#if cart.items.length === 0}
 		<div class="flex col-span-2 justify-center items-middle">
-			<p class="text-2xl">Your cart is empty! Go Find some <a href="/shop" class="underline">awesome stuff</a>!</p>
+			<p class="text-2xl">
+				Your cart is empty! Go Find some <a href="/shop" class="underline">awesome stuff</a
+				>!
+			</p>
 		</div>
 	{:else}
-	<table class="min-w-full bg-white/80 border border-gray-200 rounded-lg col-span-2 dark:bg-gray-700 dark:border-none shadow-xl">
-		<thead class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal dark:bg-gray-900 dark:text-white">
-			<tr>
-				<th class="py-3 px-6 text-left">Item</th>
-				<th class="py-3 px-6 text-left">Quantity</th>
-				<th class="py-3 px-6 text-left">Total</th>
-			</tr>
-		</thead>
-		<tbody class="text-gray-600 text-sm font-light">
-			{#each cart.items as item}
-				<tr class="border-b border-gray-200 hover:bg-gray-100 transition dark:text-gray-100 hover:dark:bg-gray-800 dark:border-gray-500">
-					<!-- Item Column: Includes Image, Title, and Variant -->
-					<td class="py-3 px-6 text-left whitespace-nowrap flex items-center space-x-4">
-						<img
-							src={item.thumbnail}
-							alt={item.product_title}
-							class="w-12 h-12 rounded-md"
-						/>
-						<div>
-							<a href="/shop/item/{item.product_handle}" class="font-medium">{item.product_title}</a>
-							<div class="text-sm text-gray-500 dark:text-gray-200">{item.variant_title}</div>
-						</div>
-					</td>
-
-					<!-- Quantity Column: Includes Modify Quantity and Delete Button -->
-					<td class="py-3 px-6 text-left">
-						<div class="flex items-center space-x-2">
-							<!-- Decrease quantity button -->
-							<button
-								class="text-gray-500 hover:text-gray-700 focus:outline-none transition-all dark:text-gray-200 dark:hover:text-white"
-								disabled={item.quantity < 2}
-								on:click={() => quantity_modify(item.id, item.quantity - 1)}
+		<div class="overflow-x-auto">
+			<table
+				class="min-w-full bg-white/80 border border-gray-200 rounded-lg col-span-2 dark:bg-gray-700 dark:border-none shadow-xl"
+			>
+				<thead
+					class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal dark:bg-gray-900 dark:text-white"
+				>
+					<tr>
+						<th class="py-3 px-6 text-left">Item</th>
+						<th class="py-3 px-6 text-left">Quantity</th>
+						<th class="py-3 px-6 text-left">Total</th>
+					</tr>
+				</thead>
+				<tbody class="text-gray-600 text-sm font-light">
+					{#each cart.items as item}
+						<tr
+							class="border-b border-gray-200 hover:bg-gray-100 transition dark:text-gray-100 hover:dark:bg-gray-800 dark:border-gray-500"
+						>
+							<!-- Item Column: Includes Image, Title, and Variant -->
+							<td
+								class="py-3 px-6 text-left whitespace-nowrap flex items-center space-x-4"
 							>
-								<svg
-									class="w-5 h-5"
-									data-slot="icon"
-									aria-hidden="true"
-									fill="none"
-									stroke-width="1.5"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M5 12h14"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									></path>
-								</svg>
-							</button>
+								<img
+									src={item.thumbnail}
+									alt={item.product_title}
+									class="w-12 h-12 rounded-md"
+								/>
+								<div>
+									<a href="/shop/item/{item.product_handle}" class="font-medium"
+										>{item.product_title}</a
+									>
+									<div class="text-sm text-gray-500 dark:text-gray-200">
+										{item.variant_title}
+									</div>
+								</div>
+							</td>
 
-							<!-- Display quantity -->
-							<span class="px-3 py-1 border rounded">{item.quantity}</span>
+							<!-- Quantity Column: Includes Modify Quantity and Delete Button -->
+							<td class="py-3 px-6 text-left">
+								<div class="flex items-center space-x-2">
+									<!-- Decrease quantity button -->
+									<button
+										class="text-gray-500 hover:text-gray-700 focus:outline-none transition-all dark:text-gray-200 dark:hover:text-white"
+										disabled={item.quantity < 2}
+										on:click={() => quantity_modify(item.id, item.quantity - 1)}
+									>
+										<svg
+											class="w-5 h-5"
+											data-slot="icon"
+											aria-hidden="true"
+											fill="none"
+											stroke-width="1.5"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M5 12h14"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+										</svg>
+									</button>
 
-							<!-- Increase quantity button -->
-							<button
-								class="text-gray-500 hover:text-gray-700 focus:outline-none transition-all dark:text-gray-200 dark:hover:text-white"
-								on:click={() => quantity_modify(item.id, item.quantity + 1)}
+									<!-- Display quantity -->
+									<span class="px-3 py-1 border rounded">{item.quantity}</span>
+
+									<!-- Increase quantity button -->
+									<button
+										class="text-gray-500 hover:text-gray-700 focus:outline-none transition-all dark:text-gray-200 dark:hover:text-white"
+										on:click={() => quantity_modify(item.id, item.quantity + 1)}
+									>
+										<svg
+											class="w-5 h-5"
+											data-slot="icon"
+											aria-hidden="true"
+											fill="none"
+											stroke-width="1.5"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M12 4.5v15m7.5-7.5h-15"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+										</svg>
+									</button>
+
+									<!-- Delete item button -->
+									<button
+										class="text-red-500 hover:text-red-700 focus:outline-none ml-4"
+										on:click={() => remove_from_cart(item.id)}
+									>
+										<svg
+											class="w-6 h-6"
+											data-slot="icon"
+											aria-hidden="true"
+											fill="none"
+											stroke-width="1.5"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M6 18 18 6M6 6l12 12"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											></path>
+										</svg>
+									</button>
+								</div>
+							</td>
+
+							<!-- Total Column: Displays the calculated total price -->
+							<td class="py-3 px-6 text-left"
+								>{format_money(item.unit_price * item.quantity)}</td
 							>
-								<svg
-									class="w-5 h-5"
-									data-slot="icon"
-									aria-hidden="true"
-									fill="none"
-									stroke-width="1.5"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M12 4.5v15m7.5-7.5h-15"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									></path>
-								</svg>
-							</button>
-
-							<!-- Delete item button -->
-							<button
-								class="text-red-500 hover:text-red-700 focus:outline-none ml-4"
-								on:click={() => remove_from_cart(item.id)}
-							>
-								<svg
-									class="w-6 h-6"
-									data-slot="icon"
-									aria-hidden="true"
-									fill="none"
-									stroke-width="1.5"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M6 18 18 6M6 6l12 12"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									></path>
-								</svg>
-							</button>
-						</div>
-					</td>
-
-					<!-- Total Column: Displays the calculated total price -->
-					<td class="py-3 px-6 text-left"
-						>{format_money(item.unit_price * item.quantity)}</td
+						</tr>
+					{/each}
+					<tr
+						class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal font-semibold dark:bg-gray-900 dark:text-white dark:border-gray-500"
 					>
-				</tr>
-			{/each}
-			<tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal font-semibold dark:bg-gray-900 dark:text-white dark:border-gray-500">
-				<td class="py-3 px-6 text-left"></td>
-				<td class="py-3 px-6 text-left"></td>
-				<td class="py-3 px-6 text-left">{format_money(cart.total)}</td>
-			</tr>
-		</tbody>
-	</table>
+						<td class="py-3 px-6 text-left"></td>
+						<td class="py-3 px-6 text-left"></td>
+						<td class="py-3 px-6 text-left">{format_money(cart.total - cart.shipping_total)}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	{/if}
 	<div>
 		<form on:submit|preventDefault={submit_checkout_form}>

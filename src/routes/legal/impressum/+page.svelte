@@ -1,6 +1,6 @@
-<div class="flex w-full justify-center">
-	<div class="flex flex-col w-1/3 gap-4">
-		<h1 class="marck-script text-8xl mx-auto">Impressum/Imprint</h1>
+<div class="flex w-full justify-center px-6 lg:px-0">
+	<div class="flex flex-col lg:w-1/3 gap-4">
+		<h1 class="marck-script text-6xl lg:text-8xl mx-auto">Impressum/Imprint</h1>
 		<p>Marlon Wolff<br />Elpenbachstraße 99<br />46119 Oberhausen<br>Deutschland</p>
 		<h2 class="text-4xl">Kontakt</h2>
 		<p>

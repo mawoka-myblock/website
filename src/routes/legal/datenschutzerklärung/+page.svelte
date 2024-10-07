@@ -1,6 +1,6 @@
-<div class="flex justify-center">
-	<div class="w-2/3">
-		<h1 class="text-5xl">Datenschutzerklärung</h1>
+<div class="flex justify-center px-6 lg:px-0">
+	<div class="lg:w-2/3">
+		<h1 class="text-3xl lg:text-5xl">Datenschutzerklärung</h1>
 		<p>Stand: 21. September 2024</p>
 		<h2 class="text-3xl">Inhaltsübersicht</h2>
 		<ul class="index">
