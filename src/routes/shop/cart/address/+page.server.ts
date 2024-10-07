@@ -4,8 +4,11 @@ import { fail, redirect } from '@sveltejs/kit';
 
 
 export const actions = {
-	default: async ({ request, fetch, cookies }) => {
+	default: async ({ request, fetch, cookies, url }) => {
 		const cart_id = cookies.get('shop_cart_id');
+		if (!cart_id) {
+			return redirect(307, `/shop?return_to=${url.pathname}`)
+		}
 		const d = await request.formData();
 		const data = {
 			first_name: d.get('first_name'),

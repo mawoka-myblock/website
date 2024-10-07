@@ -4,6 +4,9 @@ import type { ShippingOptionDTO, CartDTO } from '@medusajs/types';
 
 export const load = async ({ cookies, fetch, url }) => {
 	const shopping_cart_id = cookies.get('shop_cart_id');
+	if (!shopping_cart_id) {
+		return redirect(307, `/shop?return_to=${url.pathname}`)
+	}
 
 	const res = await fetch(
 		`${MEDUSA_BACKEND_URL}/store/shipping-options?cart_id=${shopping_cart_id}`,

@@ -7,6 +7,7 @@ export const load = async ({ cookies }) => {
 		regions = (await medusa.regions.list()).regions;
 	}
 	let cart_id = cookies.get("shop_cart_id")
+	
 	if (!cart_id && region_cookie) {
 		cart_id = (await medusa.carts.create({region_id: region_cookie})).cart.id
 	}

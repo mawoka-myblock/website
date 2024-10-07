@@ -34,7 +34,7 @@
 		class="fixed top-0 left-0 z-20 h-screen w-screen bg-black/60 flex"
 		out:fade={{ duration: 150 }}
 	>
-		<div class="flex w-1/3 h-2/3 bg-white dark:bg-gray-700 rounded flex-col m-auto">
+		<div class="flex lg:w-1/3 h-2/3 bg-white dark:bg-gray-700 rounded flex-col m-auto p-4">
 			<h2 class="text-4xl mx-auto">Select your region</h2>
 			<div class="w-full flex flex-col gap-4 p-4">
 				{#each data.regions as region}
