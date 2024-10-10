@@ -45,6 +45,7 @@
 			<a class="btn-nav" href="/things-i-do">Stuff I do</a>
 			<a class="btn-nav" href="/about">About me</a>
 			<a class="btn-nav" href="/blog">Blog</a>
+			<a class="btn-nav" href="/shop">Store</a>
 		</div>
 		<div class="lg:flex lg:items-center lg:flex-row gap-2">
 			<a href="/shop/cart" class="text-black flex flex-row gap-2 border-2 border-black/60 dark:border-white p-1.5 rounded-lg bg-black/20 hover:bg-black/10 transition"
@@ -264,6 +265,7 @@
 				<a class="btn-nav" href="/things-i-do">Stuff I do</a>
 				<a class="btn-nav" href="/about">About me</a>
 				<a class="btn-nav" href="/blog">Blog</a>
+				<a class="btn-nav" href="/shop">Store</a>
 			</div>
 		{/if}
 	</div>

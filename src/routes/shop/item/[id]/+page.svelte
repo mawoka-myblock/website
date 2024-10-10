@@ -3,7 +3,8 @@
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import JSConfetti from 'js-confetti';
-	import { fade, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
+	import {marked} from "marked"
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import type { ProductVariantDTO } from '@medusajs/types';
@@ -167,11 +168,6 @@
 	</div>
 
 	<div>
-		{#if product.description}
-			<div class="flex flex-col gap-4 m-4 bg-black/30 rounded p-2">
-				<p>{product.description}</p>
-			</div>
-		{/if}
 		<div class="flex flex-col gap-4 m-4 bg-black/30 rounded p-2">
 			{#each product.options as option, i}
 				<div class="w-full flex flex-col">
@@ -270,6 +266,11 @@
 						Success!
 					{/if}
 				</button>
+			</div>
+		{/if}
+		{#if product.description}
+			<div class="flex flex-col gap-4 m-4 bg-black/30 rounded p-2 prose-sm pt-0 mt-0">
+				<p>{@html marked.parse(product.description)}</p>
 			</div>
 		{/if}
 	</div>

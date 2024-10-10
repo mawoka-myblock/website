@@ -25,8 +25,8 @@
 					class="a-link">blog</a
 				>
 				and my biggest project, <a href="https://classquiz.de" class="a-link">ClassQuiz</a>,
-				an open-source Kahoot!-alternative. Since these aren't my only projects, I got a
-				<a href="/projects" class="a-link">list of them</a>.
+				an open-source Kahoot!-alternative. Since this isn't my only project, I got a
+				<a href="/projects" class="a-link">list of them</a>. I've also got a <a href="/shop" class="a-link">Store</a> you can explore.
 			</p>
 		</div>
 	</section>
